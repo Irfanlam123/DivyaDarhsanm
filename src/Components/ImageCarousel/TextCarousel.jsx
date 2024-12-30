@@ -5,7 +5,6 @@ const TextCarousel = () => {
     "卐 धर्मो रक्षति रक्षित: 卐",
     "卐 ॐ नमः शिवाय ! 卐",
     "卐 नमामि गंगे ! 卐",
-    "卐 'ई बनारस है गुरु' 卐",
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
