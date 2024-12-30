@@ -1,0 +1,30 @@
+import React, { useState, useEffect } from "react";
+
+const TextCarousel = () => {
+  const texts = [
+    "卐 धर्मो रक्षति रक्षित: 卐",
+    "卐 ॐ नमः शिवाय ! 卐",
+    "卐 नमामि गंगे ! 卐",
+    "卐 'ई बनारस है गुरु' 卐",
+  ];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="text-center p-4 border rounded-lg shadow-lg">
+      <p className="text-3xl font-bold text-[#F56606]">
+        {texts[currentTextIndex]}
+      </p>
+    </div>
+  );
+};
+
+export default TextCarousel;
