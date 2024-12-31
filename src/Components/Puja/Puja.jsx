@@ -1,7 +1,11 @@
 import React from "react";
-
+import Footer from "../Footer/Footer";
 function Puja() {
-  return <div>Puja</div>;
+  return (
+    <div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Puja;
