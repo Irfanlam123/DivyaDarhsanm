@@ -21,7 +21,7 @@ const Home = () => {
               </p>
               <Link
                 to="/Puja"
-                className="inline-block bg-[#F56606] text-black py-1 px-6 rounded-full text-lg font-semibold hover:bg-green-300 transition-all duration-300 transform hover:scale-105"
+                className="inline-block bg-[#F56606] text-black py-1 px-6 rounded-full text-lg font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105"
               >
                 Puja Now
               </Link>
