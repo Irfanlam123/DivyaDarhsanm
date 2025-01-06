@@ -1,13 +1,15 @@
 import React from "react";
 import Avtar from "../../../src/assets/Avtar.jpg";
 import { Link } from "react-router-dom";
+import Kaal from "../../../src/assets/Puja/Kaal.jpeg";
+import Kashi from "../../../src/assets/Puja/Kashi.jpeg";
 
 const Design = () => {
   return (
     <div className="flex justify-center space-x-4 ">
       <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
         <img
-          src="https://divyadarshanm.in/wp-content/uploads/2024/12/Shri-Kaal-Bhairav-__Aapda-Haran-Yagya-Batuk-Bhairav-Stotra-Kaal-Bhairav-__Ashtakam-and-Maha-Aarti.jpg"
+          src={Kaal}
           alt="Kaal Bhairav Temple"
           className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
         />
@@ -32,7 +34,7 @@ const Design = () => {
 
       <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
         <img
-          src="https://divyadarshanm.in/wp-content/uploads/2024/12/Shri-Kaal-Bhairav-__Aapda-Haran-Yagya-Batuk-Bhairav-Stotra-Kaal-Bhairav-__Ashtakam-and-Maha-Aarti.png"
+          src={Kaal}
           alt="Kaal Bhairav Temple"
           className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
         />
@@ -53,7 +55,7 @@ const Design = () => {
       </div>
       <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
         <img
-          src="https://divyadarshanm.in/wp-content/uploads/2024/12/Shri-Kaal-Bhairav-__Aapda-Haran-Yagya-Batuk-Bhairav-Stotra-Kaal-Bhairav-__Ashtakam-and-Maha-Aarti-2.png"
+          src={Kashi}
           alt="Kaal Bhairav Temple"
           className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
         />

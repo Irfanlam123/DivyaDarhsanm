@@ -6,10 +6,11 @@ import {
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
-import Lord1 from "../../../src/assets/Footer/Footer1.jpg";
-import Lord2 from "../../../src/assets/Footer/Footer2.jpg";
-import Lord3 from "../../../src/assets/Footer/Footer3.jpg";
+
 import Logo from "../../../src/assets/logo.jpeg";
+import KedarNath from "../../../src/assets/Footer/kedarNath.webp";
+import KashiViswa from "../../../src/assets/Footer/KashiViswanath.webp";
+import Rameswaram from "../../../src/assets/Footer/Rameswaram.webp";
 
 export default function Footer() {
   return (
@@ -18,21 +19,21 @@ export default function Footer() {
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           <div>
             <img
-              src={Lord1}
+              src={KedarNath}
               className="w-full h-[270px] rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
               alt="Temple Image 1"
             />
           </div>
           <div>
             <img
-              src={Lord2}
+              src={KashiViswa}
               className="w-full h-[270px] rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
               alt="Temple Image 2"
             />
           </div>
           <div>
             <img
-              src={Lord3}
+              src={Rameswaram}
               className="w-full h-[270px] rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
               alt="Temple Image 3"
             />

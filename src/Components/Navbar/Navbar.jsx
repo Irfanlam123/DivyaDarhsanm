@@ -25,7 +25,7 @@ const Navbar = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-gray-900 hover:underline ${isActive ? "font-bold" : ""}`
+                  `text-gray-900 hover:underline font-bold  ${isActive ? "font-bold" : ""}`
                 }
               >
                 {item.name}
