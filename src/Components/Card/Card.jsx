@@ -1,5 +1,7 @@
 import React from "react";
 import Avtar from "../../../src/assets/Avtar.jpg";
+import { Link } from "react-router-dom";
+
 const Design = () => {
   return (
     <div className="flex justify-center space-x-4 ">
@@ -18,9 +20,12 @@ const Design = () => {
             Kashi.
           </p>
           <div className="mt-4 flex justify-center">
-            <button className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Link
+              to="/participate"
+              className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
+            >
               Book Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>

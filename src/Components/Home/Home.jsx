@@ -5,10 +5,12 @@ import TextCarousel from "../ImageCarousel/TextCarousel";
 import { Link } from "react-router-dom";
 import Design from "../Card/Card";
 import Footer from "../Footer/Footer";
+import { GiByzantinTemple } from "react-icons/gi";
+import { FaHandsWash } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div>
+    <div className="font-montserrat">
       <div className="relative p-2 shadow-2xl">
         <ImageCarousel />
 
@@ -71,6 +73,26 @@ const Home = () => {
 
       <div className="py-8">
         <Design />
+      </div>
+
+      <div className="p-2 flex justify-center bg-gray-300           ">
+        <p className="px-20  ">
+          <GiByzantinTemple className="text-[250px] text-gray-950" />
+        </p>
+        <p className="px-32 py-10  ">
+          <img
+            src="https://divyadarshanm.in/wp-content/uploads/2024/11/1.svg"
+            alt=""
+          />
+        </p>
+
+        <p className="px-32   ">
+          <img
+            src="https://divyadarshanm.in/wp-content/uploads/2024/11/2.svg"
+            alt=""
+            className=""
+          />
+        </p>
       </div>
 
       <Footer />
