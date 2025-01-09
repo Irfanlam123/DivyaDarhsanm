@@ -98,7 +98,7 @@ const App = () => {
           <button
             key={section.id}
             onClick={() => scrollToSection(section.id)}
-            className=" text-black font-extrabold hover:underline hover:text-orange-600 py-2 px-4 rounded-md transition-all "
+            className=" text-black font-extrabold hover:underline hover:text-orange-600 py-2 px-4 rounded-md transition-all  "
           >
             {section.title}
           </button>
