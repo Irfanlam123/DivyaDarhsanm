@@ -3,36 +3,70 @@ import Avtar from "../../../src/assets/Avtar.jpg";
 import { Link } from "react-router-dom";
 import Kaal from "../../../src/assets/Puja/Kaal.jpeg";
 import Kashi from "../../../src/assets/Puja/Kashi.jpeg";
+import { useNavigate } from "react-router-dom";
+import { Benifits } from "../Puja/components/benifits";
 
 const Design = () => {
-  return (
-    <div className="flex justify-center space-x-4 ">
-      <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
-        <img
-          src={Kaal}
-          alt="Kaal Bhairav Temple"
-          className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-        />
-        <div className="flex flex-col justify-between p-4 flex-1">
-          <h3 className="text-lg font-bold text-gray-800 text-center transition-transform duration-300 ease-in-out hover:scale-105 ">
-            📍Kaal Bhairav Temple, Kashi
-          </h3>
-          <p className="text-[17px] text-gray-600 mt-2 text-center leading-relaxed">
-            Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple,
-            Kashi.
-          </p>
-          <div className="mt-4 flex justify-center">
-            <Link
-              to="/participate"
-              className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
-            >
-              Book Now
-            </Link>
-          </div>
-        </div>
-      </div>
+  const navigate = useNavigate();
 
-      <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
+  const handleNavigation = (id) => {
+    navigate(`/${id}`);
+  };
+  const cardData = [
+    {
+      id: 1,
+      image: Kaal,
+      heading: "Kaal Bhairav Temple, Kashi",
+      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple,Kashi.",
+    },
+    {
+      id: 2,
+      image: Kaal,
+      heading: "Kaal Bhairav Temple, Kashi",
+      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple,Kashi.",
+    },
+    {
+      id: 3,
+      image: Kaal,
+      heading: "Kaal Bhairav Temple, Kashi",
+      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple,Kashi.",
+    },
+  ];
+  return (
+    <>
+      {cardData.map((c, i) => {
+        return (
+          <>
+            <div className=" ">
+              <div className="h-[480px] w-96  space-x-4 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
+                <img
+                  src={c.image}
+                  alt="Kaal Bhairav Temple"
+                  className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+
+                <div className="flex flex-col justify-between p-4 flex-1">
+                  <h3 className="text-lg font-bold text-gray-800 text-center transition-transform duration-300 ease-in-out hover:scale-105 ">
+                    {c.heading}
+                  </h3>
+                  <p className="text-[17px] text-gray-600 mt-2 text-center leading-relaxed">
+                    {c.des}
+                  </p>
+                  <div className="mt-4 flex justify-center">
+                    <span
+                      onClick={() => handleNavigation(c.id)}
+                      className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
+                    >
+                      Book Now
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      })}
+      {/* <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
         <img
           src={Kaal}
           alt="Kaal Bhairav Temple"
@@ -47,9 +81,12 @@ const Design = () => {
             Kashi
           </p>
           <div className="mt-4 flex justify-center">
-            <button className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Link
+              to="/participate"
+              className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
+            >
               Book Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -68,13 +105,16 @@ const Design = () => {
             Kashi
           </p>
           <div className="mt-4 flex justify-center">
-            <button className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Link
+              to="/participate"
+              className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
+            >
               Book Now
-            </button>
+            </Link>
           </div>
         </div>
-      </div>
-    </div>
+      </div> */}
+    </>
   );
 };
 

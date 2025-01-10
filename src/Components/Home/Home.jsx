@@ -7,6 +7,13 @@ import Design from "../Card/Card";
 import Footer from "../Footer/Footer";
 import { GiByzantinTemple } from "react-icons/gi";
 import { FaHandsWash } from "react-icons/fa";
+import FAQs from "../Home/Components/FAQs";
+import FAQPage from "../Home/Components/FAQs";
+import Icon from "../../../src/assets/Homepage/BookingComplete.webp";
+import PoojaIcon from "../../../src/assets/Homepage/Pooja.webp";
+import FamilyIcon from "../../../src/assets/Homepage/AddFamily.webp";
+import BlessingIcon from "../../../src/assets/Homepage/Blessing.webp";
+import ReviewCarousel from "../ImageCarousel/ReviewsText";
 
 const Home = () => {
   return (
@@ -25,7 +32,7 @@ const Home = () => {
               </p>
               <Link
                 to="/Puja"
-                className="inline-block bg-[#F56606] text-black py-1 px-6 rounded-full text-lg font-semibold hover:bg-green-400 transition-all duration-300 transform hover:scale-105"
+                className="inline-block bg-orange-400 text-black py-1 px-8 rounded-full text-[16px] font-montserrat hover:bg-green-400 transition-all duration-300 transform hover:scale-105"
               >
                 Puja Now
               </Link>
@@ -75,26 +82,142 @@ const Home = () => {
         <Design />
       </div>
 
-      <div className="p-2 flex justify-center bg-gray-300           ">
-        <p className="px-20  ">
-          <GiByzantinTemple className="text-[250px] text-gray-950" />
-        </p>
-        <p className="px-32 py-10  ">
+      <div className="bg-gray-300">
+        <div className="p-2  py-6 ">
+          <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
+            Featured Sevas
+          </h1>
+          <div className="flex justify-center">
+            <div>
+              <p className="px-20  ">
+                <img
+                  src="https://divyadarshanm.in/wp-content/uploads/2024/11/1.svg"
+                  alt=""
+                />
+              </p>
+              <p className="font-bold font-montserrat text-2xl px-32">Pooja</p>
+            </div>
+            <div>
+              <p className="px-20  ">
+                <img
+                  src="https://divyadarshanm.in/wp-content/uploads/2024/11/2.svg"
+                  alt=""
+                />
+              </p>
+              <p className="font-bold font-montserrat text-2xl px-24">
+                Annadaan
+              </p>
+            </div>
+            <div>
+              <p className="px-20  ">
+                <img
+                  src="https://divyadarshanm.in/wp-content/uploads/2024/11/3.svg"
+                  alt=""
+                />
+              </p>
+              <p className="font-bold font-montserrat text-2xl px-32">
+                Gauseva
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="p-2 py-6 ">
+          <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
+            Know How wiil you Join The Pujas
+          </h1>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p>
+              <img
+                src={PoojaIcon}
+                alt="icon"
+                className="h-60 w-full rounded-full mb-6 "
+              />
+            </p>
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              01 Choose A Pooja
+            </p>
+          </div>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              02 Add Family Data
+            </p>
+            <p>
+              <img
+                src={FamilyIcon}
+                alt="icon"
+                className="h-60 w-full rounded-full mb-6 "
+              />
+            </p>
+          </div>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p>
+              <img
+                src={Icon}
+                alt="icon"
+                className="h-60 w-full rounded-full mb-6 "
+              />
+            </p>
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              03 Booking Complete
+            </p>
+          </div>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              04 Receive Blessing
+            </p>
+            <p>
+              <img
+                src="https://divyadarshanm.in/wp-content/uploads/2024/11/blessing1.bc0a96b4d43673ac77699504f58a20ec.svg"
+                alt="icon"
+                className="h-60 w-full mb-6 "
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gray-300">
+        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
+          Our Puja Kshetras Across Multiple States in India
+        </h1>
+        <div className="p-6 flex justify-center h-[650px] w-full">
           <img
-            src="https://divyadarshanm.in/wp-content/uploads/2024/11/1.svg"
+            className=" "
+            src="https://divyadarshanm.in/wp-content/uploads/2024/11/map.svg"
             alt=""
           />
-        </p>
-
-        <p className="px-32   ">
-          <img
-            src="https://divyadarshanm.in/wp-content/uploads/2024/11/2.svg"
-            alt=""
-            className=""
-          />
-        </p>
+        </div>
+      </div>
+      <div className="bg-gray-300">
+        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
+          Start Your Spritual Journey
+        </h1>
+        <div className="flex justify-center">
+          <Link
+            to="/Puja"
+            className=" bg-orange-400 text-black py-2 px-6  rounded-sm text-[16px] font-montserrat hover:bg-green-400 transition-all duration-300 transform hover:scale-105 mb-10"
+          >
+            Book Now
+          </Link>
+        </div>
       </div>
 
+      <div className="bg-white">
+        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-3 ">
+          Devotees' Review
+        </h1>
+        <p className="font-bold text-xl font-montserrat text-gray-950 flex justify-center  ">
+          Hear it from our blessed devotees
+        </p>
+        <div>
+          <ReviewCarousel />
+        </div>
+      </div>
+
+      <FAQPage />
       <Footer />
     </div>
   );
