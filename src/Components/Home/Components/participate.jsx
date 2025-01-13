@@ -46,7 +46,7 @@ const Participate = () => {
             <img
               src="https://divyadarshanm.in/wp-content/uploads/2024/11/Screenshot-2024-11-13-at-10.13.07%E2%80%AFAM.png"
               alt="Kaal Bhairav"
-              className="w-full h-64 md:h-full object-cover"
+              className="w-full h-64 md:h-full object-cover rounded-lg"
             />
           </div>
 

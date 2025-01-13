@@ -12,27 +12,34 @@ import FAQPage from "../Home/Components/FAQs";
 import Icon from "../../../src/assets/Homepage/BookingComplete.webp";
 import PoojaIcon from "../../../src/assets/Homepage/Pooja.webp";
 import FamilyIcon from "../../../src/assets/Homepage/AddFamily.webp";
-import BlessingIcon from "../../../src/assets/Homepage/Blessing.webp";
 import ReviewCarousel from "../ImageCarousel/ReviewsText";
+import Bless from "../../assets/Homepage/Bless.webp";
 
 const Home = () => {
   return (
     <div className="font-montserrat">
       <div className="relative p-2 shadow-2xl">
-        <ImageCarousel />
+        {/* <ImageCarousel /> */}
+        {/* <img
+          src="https://triptovaranasi.in/wp-content/uploads/2024/01/Ayodhya-Ram-Mandir-Darshan-Booking.webp"
+          alt=""
+          className="w-full"
+        /> */}
 
-        <div className="">
+        {/* <div className="">
           <div className="absolute top-1/2 left-0 transform -translate-y-1/2 flex justify-center space-x-14 p-6  w-full">
             <div className="text-[#F56606] text-4xl font-extrabold py-[98px]">
-              <h1 className="text-black">Your Way to</h1>
-              <h2 className="text-5xl font-bold">Sanatana Dharma!</h2>
-              <p className="mt-4 text-lg text-blue-400 font-bold">
+              <h1 className="text-slate-100">Your Way to</h1>
+              <h2 className="text-5xl text-yellow-200 font-bold">
+                Sanatana Dharma!
+              </h2>
+              <p className="mt-4 text-lg text-slate-950 font-bold">
                 Daily darshans, Puja rituals, and Chadhava offerings, all in
                 one.
               </p>
               <Link
                 to="/Puja"
-                className="inline-block bg-orange-400 text-black py-1 px-8 rounded-full text-[16px] font-montserrat hover:bg-green-400 transition-all duration-300 transform hover:scale-105"
+                className="inline-block bg-slate-950 text-slate-50 py-1 px-32 rounded-md text-[16px] font-montserrat hover:bg-slate-50 hover:text-slate-950 transition-all duration-300 transform hover:scale-105"
               >
                 Puja Now
               </Link>
@@ -43,6 +50,44 @@ const Home = () => {
               alt="Trishul"
               className="w-96 h-50 ml-6 rounded-xl hover:shadow-2xl"
             />
+          </div>
+        </div> */}
+
+        <div className="flex flex-col justify-center items-center ">
+          {/* Div Sections */}
+          <div className="flex w-full ">
+            <div className="bg-red-200 h-[570px] w-[1700px]  items-center ">
+              <div className="flex flex-col mt-56 justify-center">
+                <h1 className="flex justify-center text-4xl font-bold   font-montserrat">
+                  Your Way to
+                </h1>
+                <p className="flex justify-center  text-blue-950 text-4xl font-bold font-montserrat">
+                  Sanatan Dharma!
+                </p>
+                <p className=" flex justify-center  mt-4 text-lg text-blue-600 font-bold">
+                  Daily darshans, Puja rituals, and Chadhava offerings, all in
+                  one.
+                </p>
+                <div className="flex justify-center py-6">
+                  <Link
+                    to="/Puja"
+                    className="inline-block bg-slate-950 text-slate-50 py-2 font-semibold px-16 rounded-md text-[16px] font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Puja Now
+                  </Link>
+                </div>
+                <p></p>
+              </div>
+              <div className="py-8 flex justify-center">icons.....</div>
+            </div>
+
+            <div className="bg-slate-50 h-[570px] w-full shadow-2xl flex justify-center items-center">
+              <img
+                src={TrishulImage}
+                alt="Trishul"
+                className="w-96 h-50 ml-6 rounded-xl shadow-slate-400  hover:shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -78,11 +123,11 @@ const Home = () => {
         </a>
       </div>
 
-      <div className="py-8">
+      <div className="py-4">
         <Design />
       </div>
 
-      <div className="bg-gray-300">
+      <div className="bg-pink-50">
         <div className="p-2  py-6 ">
           <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
             Featured Sevas
@@ -171,15 +216,15 @@ const Home = () => {
             </p>
             <p>
               <img
-                src="https://divyadarshanm.in/wp-content/uploads/2024/11/blessing1.bc0a96b4d43673ac77699504f58a20ec.svg"
+                src={Bless}
                 alt="icon"
-                className="h-60 w-full mb-6 "
+                className="h-60 w-full rounded-full mb-6 "
               />
             </p>
           </div>
         </div>
       </div>
-      <div className="bg-gray-300">
+      <div className="bg-gray-100">
         <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
           Our Puja Kshetras Across Multiple States in India
         </h1>

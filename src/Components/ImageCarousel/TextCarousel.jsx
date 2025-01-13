@@ -19,7 +19,7 @@ const TextCarousel = () => {
 
   return (
     <div className="text-center p-4 border rounded-lg shadow-lg">
-      <p className="text-3xl font-bold text-[#F56606]">
+      <p className="text-3xl font-bold text-gray-500">
         {texts[currentTextIndex]}
       </p>
     </div>

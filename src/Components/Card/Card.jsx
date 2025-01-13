@@ -1,10 +1,6 @@
 import React from "react";
-import Avtar from "../../../src/assets/Avtar.jpg";
-import { Link } from "react-router-dom";
-import Kaal from "../../../src/assets/Puja/Kaal.jpeg";
-import Kashi from "../../../src/assets/Puja/Kashi.jpeg";
 import { useNavigate } from "react-router-dom";
-import { Benifits } from "../Puja/components/benifits";
+import Kaal from "../../../src/assets/Puja/Kaal.jpeg";
 
 const Design = () => {
   const navigate = useNavigate();
@@ -12,109 +8,64 @@ const Design = () => {
   const handleNavigation = (id) => {
     navigate(`/${id}`);
   };
+
   const cardData = [
     {
       id: 1,
       image: Kaal,
       heading: "Kaal Bhairav Temple, Kashi",
-      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple,Kashi.",
+      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple, Kashi.",
     },
     {
       id: 2,
       image: Kaal,
       heading: "Kaal Bhairav Temple, Kashi",
-      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple,Kashi.",
+      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple, Kashi.",
     },
     {
       id: 3,
       image: Kaal,
       heading: "Kaal Bhairav Temple, Kashi",
-      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple,Kashi.",
+      des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple, Kashi.",
     },
   ];
-  return (
-    <>
-      {cardData.map((c, i) => {
-        return (
-          <>
-            <div className=" ">
-              <div className="h-[480px] w-96  space-x-4 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
-                <img
-                  src={c.image}
-                  alt="Kaal Bhairav Temple"
-                  className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
 
-                <div className="flex flex-col justify-between p-4 flex-1">
-                  <h3 className="text-lg font-bold text-gray-800 text-center transition-transform duration-300 ease-in-out hover:scale-105 ">
-                    {c.heading}
-                  </h3>
-                  <p className="text-[17px] text-gray-600 mt-2 text-center leading-relaxed">
-                    {c.des}
-                  </p>
-                  <div className="mt-4 flex justify-center">
-                    <span
-                      onClick={() => handleNavigation(c.id)}
-                      className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
-                    >
-                      Book Now
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </>
-        );
-      })}
-      {/* <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
-        <img
-          src={Kaal}
-          alt="Kaal Bhairav Temple"
-          className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-        />
-        <div className="flex flex-col justify-between p-4 flex-1">
-          <h3 className="text-lg font-bold text-gray-800 text-center transition-transform duration-300 ease-in-out hover:scale-105">
-            📍Mrityunjaya Mahadev Temple Kashi
-          </h3>
-          <p className="text-[17px] text-gray-600 mt-2 text-center leading-relaxed">
-            Special Mahamrityunjaya Mantra Jaap Rudrabhishek Kartik Somvar,
-            Kashi
-          </p>
-          <div className="mt-4 flex justify-center">
-            <Link
-              to="/participate"
-              className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
+  return (
+    <div className="flex flex-wrap justify-center gap-6 p-4">
+      {cardData.map((card) => (
+        <div
+          key={card.id}
+          onClick={() => handleNavigation(card.id)}
+          className="w-72 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105 flex flex-col overflow-hidden cursor-pointer"
+        >
+          {/* Card Image */}
+          <img
+            src={card.image}
+            alt={card.heading}
+            className="h-40 w-full object-cover rounded-t-lg transition-transform duration-300 ease-in-out hover:scale-105"
+          />
+          {/* Card Content */}
+          <div className="p-4 flex flex-col flex-grow justify-between">
+            <h3 className="text-md font-semibold text-gray-800 text-center">
+              {card.heading}
+            </h3>
+            <p className="text-sm text-gray-600 mt-2 text-center leading-relaxed">
+              {card.des}
+            </p>
+            {/* Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // Prevents card click event
+                handleNavigation(card.id);
+              }}
+              className="mt-4 bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 self-center"
             >
               Book Now
-            </Link>
+            </button>
           </div>
         </div>
-      </div>
-      <div className="h-[480px] w-96 rounded-md hover:shadow-2xl hover:bg-gray-100 flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
-        <img
-          src={Kashi}
-          alt="Kaal Bhairav Temple"
-          className="h-50 w-full rounded-t-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-        />
-        <div className="flex flex-col justify-between p-4 flex-1">
-          <h3 className="text-lg font-bold text-gray-800 text-center transition-transform duration-300 ease-in-out hover:scale-105">
-            📍 Ganga Ghat Kashi{" "}
-          </h3>
-          <p className="text-[17px] text-gray-600 mt-2 text-center leading-relaxed">
-            Makar Sankranti Special Brahman Bhojan, Gau Seva and Deep Daan in
-            Kashi
-          </p>
-          <div className="mt-4 flex justify-center">
-            <Link
-              to="/participate"
-              className="bg-[#F56606] hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105"
-            >
-              Book Now
-            </Link>
-          </div>
-        </div>
-      </div> */}
-    </>
+      ))}
+    </div>
   );
 };
 
