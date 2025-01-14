@@ -11,11 +11,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-slate-900 p-1 font-montserrat shadow-lg">
+    <nav className=" bg-gradient-to-r from-blue-100 to-purple-200 p-1 font-montserrat shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
-          <span className="text-[#fdfbfa] font-extrabold text-xl">
+          <span className="text-slate-950 font-extrabold text-xl">
             DivyaDarshanm
           </span>
         </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-gray-100 hover:transition-all text-sm   hover:text-orange-200 font-semibold ${
+                  `text-slate-700 hover:transition-all text-sm   hover:text-orange-400 font-semibold ${
                     isActive ? "font-bold text-[#fdfcfb]" : ""
                   }`
                 }

@@ -80,7 +80,9 @@ function PujaCard({
             <Link
               to="/participate"
               onClick={(e) => e.stopPropagation()}
-              className="inline-block px-3 py-3 text-xs text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md hover:from-yellow-400 hover:to-orange-500 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-all duration-300"
+              className="inline-block px-3 py-3 text-xs text-white 
+              bg-gradient-to-r from-blue-500 to-purple-500
+               rounded-md hover:from-yellow-400 hover:to-orange-500 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-all duration-300"
             >
               Participate Now
             </Link>

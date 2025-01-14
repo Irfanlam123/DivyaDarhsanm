@@ -37,7 +37,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="carousel-container h-[500px] w-full">
+    <div className="carousel-container h-[400px] w-full ">
       <Carousel
         showArrows={true}
         autoPlay={true}
@@ -51,7 +51,7 @@ const ImageCarousel = () => {
             <img
               src={image.src}
               alt={image.alt}
-              className="h-[500px] w-full object-cover"
+              className="h-[400px] w-full object-cover rounded-md"
             />
           </div>
         ))}

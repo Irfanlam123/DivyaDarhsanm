@@ -16,47 +16,70 @@ import ReviewCarousel from "../ImageCarousel/ReviewsText";
 import Bless from "../../assets/Homepage/Bless.webp";
 
 const Home = () => {
+  const pujaProcess = [
+    {
+      id: 1,
+      title: "Puja Process",
+      image:
+        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
+    },
+    {
+      id: 1,
+      title: "Puja Process",
+      image:
+        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
+    },
+    {
+      id: 1,
+      title: "Puja Process",
+      image:
+        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
+    },
+    {
+      id: 1,
+      title: "Puja Process",
+      image:
+        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
+    },
+  ];
+  const cardData = [
+    {
+      id: 1,
+      name: "Something1",
+      image:
+        "https://images.pexels.com/photos/18287935/pexels-photo-18287935/free-photo-of-view-of-arulmigu-ramanathaswamy-temple-in-rameshwaram.jpeg?auto=compress&cs=tinysrgb&w=600",
+      price: "35/minutes",
+    },
+    {
+      id: 2,
+      name: "Something2",
+      image:
+        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
+      price: "35/m",
+    },
+    {
+      id: 3,
+      name: "Something3",
+      image:
+        "https://images.pexels.com/photos/18892582/pexels-photo-18892582/free-photo-of-japan-wallpapers.jpeg?auto=compress&cs=tinysrgb&w=600",
+      price: "35/m",
+    },
+    {
+      id: 4,
+      name: "Something4",
+      image:
+        "https://images.pexels.com/photos/27941934/pexels-photo-27941934/free-photo-of-ancient-city-bangkok.jpeg?auto=compress&cs=tinysrgb&w=600",
+      price: "35/m",
+    },
+  ];
   return (
     <div className="font-montserrat">
       <div className="relative p-2 shadow-2xl">
-        {/* <ImageCarousel /> */}
-        {/* <img
-          src="https://triptovaranasi.in/wp-content/uploads/2024/01/Ayodhya-Ram-Mandir-Darshan-Booking.webp"
-          alt=""
-          className="w-full"
-        /> */}
-
-        {/* <div className="">
-          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 flex justify-center space-x-14 p-6  w-full">
-            <div className="text-[#F56606] text-4xl font-extrabold py-[98px]">
-              <h1 className="text-slate-100">Your Way to</h1>
-              <h2 className="text-5xl text-yellow-200 font-bold">
-                Sanatana Dharma!
-              </h2>
-              <p className="mt-4 text-lg text-slate-950 font-bold">
-                Daily darshans, Puja rituals, and Chadhava offerings, all in
-                one.
-              </p>
-              <Link
-                to="/Puja"
-                className="inline-block bg-slate-950 text-slate-50 py-1 px-32 rounded-md text-[16px] font-montserrat hover:bg-slate-50 hover:text-slate-950 transition-all duration-300 transform hover:scale-105"
-              >
-                Puja Now
-              </Link>
-            </div>
-
-            <img
-              src={TrishulImage}
-              alt="Trishul"
-              className="w-96 h-50 ml-6 rounded-xl hover:shadow-2xl"
-            />
-          </div>
-        </div> */}
-
         <div className="flex flex-col justify-center items-center ">
           {/* Div Sections */}
           <div className="flex w-full ">
-            <div className="bg-red-200 h-[570px] w-[1700px]  items-center ">
+            <div className="bg-gradient-to-r from-blue-200 to-blue-300 h-[570px] w-[1700px]  items-center ">
+              {/* <ImageCarousel /> */}
               <div className="flex flex-col mt-56 justify-center">
                 <h1 className="flex justify-center text-4xl font-bold   font-montserrat">
                   Your Way to
@@ -76,12 +99,26 @@ const Home = () => {
                     Puja Now
                   </Link>
                 </div>
-                <p></p>
               </div>
-              <div className="py-8 flex justify-center">icons.....</div>
+              <div className="py-8 flex justify-center">
+                {pujaProcess.map((puja) => (
+                  <div key={puja.id}>
+                    <h3 className=" text-sm  px-4 text-gray-700">
+                      Puja..........
+                    </h3>
+                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-300 mb-4 space-y-2 hover:scale-110 transition-transform duration-300">
+                      <img
+                        src={puja.image}
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="bg-slate-50 h-[570px] w-full shadow-2xl flex justify-center items-center">
+            <div className="bg-gradient-to-r from-pink-200 to-blue-200 h-[570px] w-full shadow-2xl flex justify-center items-center">
               <img
                 src={TrishulImage}
                 alt="Trishul"
@@ -92,42 +129,57 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-center py-6">
-        <TextCarousel />
+      <div className="rounded-sm p-3 bg-gray-50 h-[460px] w-full flex space-x-3">
+        {/* Cards Section */}
+        <div className="bg-gradient-to-r from-slate-400 to-slate-700 flex flex-wrap items-center justify-center p-4 gap-4 flex-[2]  ">
+          {cardData.map((card) => (
+            <div
+              key={card.id}
+              className="bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-110 transition-transform duration-400"
+            >
+              <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-300 mb-4">
+                <img
+                  src={card.image}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h2 className="text-lg font-bold">{card.name}</h2>
+              {/* <p className="text-sm text-gray-500">Price: {card.price}</p> */}
+            </div>
+          ))}
+        </div>
+
+        {/* Right Side Section */}
+        <div className="bg-gradient-to-r from-blue-200 to-blue-300 flex-1 flex items-center justify-center p-3">
+          <ImageCarousel />
+        </div>
       </div>
 
-      <div className="text-center py-3">
-        <h1 className="text-2xl font-semibold text-[#F56606]">
-          Upcoming Sevas
-        </h1>
-      </div>
-      <div className="w-full px-4  flex justify-center items-center">
-        <div className="w-full max-w-4xl bg-white shadow-md rounded-lg  text-center">
-          <p className="text-[17px] font-semibold text-black leading-relaxed">
-            Book Pujas in your and your family’s name at renowned temples in
-            India. Receive divine blessings along with a special video of the
-            sacred rituals and tirth prasad.
-          </p>
-        </div>
+      <div className="text-center py-6">
+        <TextCarousel />
       </div>
 
       <div className="flex justify-center py-3 ">
         <a
           href="/Puja"
-          className="font-bold text-xl text-[#F56606]  decoration-2 underline-offset-4 flex items-center  transition duration-300 hover:text-[#d45505] hover:underline-offset-4"
+          className="font-bold text-xl text-slate-800 font-montserrat  decoration-2 underline-offset-4 flex items-center  transition duration-300 hover:text-[#d45505] hover:underline-offset-4"
         >
-          View all Puja
+          View all Pujas
           <span className="text-2xl  items-center transition-transform duration-300 hover:translate-x-1">
             →
           </span>
         </a>
       </div>
 
-      <div className="py-4">
+      <div className="py-4 bg-gradient-to-r from-blue-50 to-blue-100 ">
         <Design />
       </div>
 
-      <div className="bg-pink-50">
+      <div
+        className=" bg-gradient-to-r from-blue-100 to-purple-200
+               "
+      >
         <div className="p-2  py-6 ">
           <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
             Featured Sevas
@@ -236,21 +288,25 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="bg-gray-300">
+      <div
+        className=" bg-gradient-to-r from-blue-100 to-purple-200
+               "
+      >
         <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
           Start Your Spritual Journey
         </h1>
         <div className="flex justify-center">
           <Link
             to="/Puja"
-            className=" bg-orange-400 text-black py-2 px-6  rounded-sm text-[16px] font-montserrat hover:bg-green-400 transition-all duration-300 transform hover:scale-105 mb-10"
+            className="  bg-gradient-to-r from-blue-500 to-purple-500
+                hover:from-yellow-400 hover:to-orange-500 text-black py-2 px-6  rounded-sm text-[16px] font-montserrat  transition-all duration-300 transform hover:scale-105 mb-10"
           >
             Book Now
           </Link>
         </div>
       </div>
 
-      <div className="bg-white">
+      <div className=" bg-gradient-to-r from-blue-200 to-purple-300">
         <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-3 ">
           Devotees' Review
         </h1>

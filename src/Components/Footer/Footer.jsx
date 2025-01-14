@@ -15,7 +15,7 @@ import Rameswaram from "../../../src/assets/Footer/Rameswaram.webp";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-gray-800 to-gray-900 text-white">
+    <footer className=" bg-gradient-to-r from-blue-200 to-purple-300 text-white">
       {/* Top Section */}
       <div className="container p-6">
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
@@ -95,7 +95,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="mt-6 text-gray-400">
+        <div className="mt-6 text-slate-950">
           <p className="text-lg font-medium">Registered Address:</p>
           <p>D 5/23 Tripura Bhairavi, Varanasi 221001</p>
         </div>
