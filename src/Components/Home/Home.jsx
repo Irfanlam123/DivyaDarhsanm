@@ -75,25 +75,26 @@ const Home = () => {
   return (
     <div className="font-montserrat">
       <div className="relative p-2 shadow-2xl">
-        <div className="flex flex-col justify-center items-center">
-          <div className="flex flex-wrap w-full">
-            {/* Left Section */}
-            <div className="bg-gradient-to-r from-blue-200 to-blue-300 h-auto w-full md:h-[570px] md:w-[60%] items-center">
-              <div className="flex flex-col mt-12 md:mt-56 justify-center px-4">
-                <h1 className="flex justify-center text-2xl md:text-4xl font-bold">
+        <div className="flex flex-col justify-center items-center ">
+          {/* Div Sections */}
+          <div className="flex w-full ">
+            <div className="bg-gradient-to-r from-blue-200 to-blue-300 h-[570px] w-[1700px]  items-center ">
+              {/* <ImageCarousel /> */}
+              <div className="flex flex-col mt-56 justify-center">
+                <h1 className="flex justify-center text-4xl font-bold   font-montserrat">
                   Your Way to
                 </h1>
-                <p className="flex justify-center text-blue-950 text-2xl md:text-4xl font-bold">
+                <p className="flex justify-center  text-blue-950 text-4xl font-bold font-montserrat">
                   Sanatan Dharma!
                 </p>
-                <p className="flex justify-center mt-4 text-base md:text-lg text-blue-600 font-bold">
+                <p className=" flex justify-center  mt-4 text-lg text-blue-600 font-bold">
                   Daily darshans, Puja rituals, and Chadhava offerings, all in
                   one.
                 </p>
                 <div className="flex justify-center py-6">
                   <Link
                     to="/Puja"
-                    className="inline-block bg-slate-950 text-slate-50 py-2 font-semibold px-8 md:px-16 rounded-md text-sm md:text-[16px] hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105"
+                    className="inline-block bg-slate-950 text-slate-50 py-2 font-semibold px-16 rounded-md text-[16px] font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105"
                   >
                     Puja Now
                   </Link>
@@ -101,9 +102,11 @@ const Home = () => {
               </div>
               <div className="py-8 flex justify-center">
                 {pujaProcess.map((puja) => (
-                  <div key={puja.id} className="px-2">
-                    <h3 className="text-sm px-4 text-gray-700">Puja........</h3>
-                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden bg-gray-300 mb-4 hover:scale-110 transition-transform duration-300">
+                  <div key={puja.id}>
+                    <h3 className=" text-sm  px-4 text-gray-700">
+                      Puja..........
+                    </h3>
+                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-300 mb-4 space-y-2 hover:scale-110 transition-transform duration-300">
                       <img
                         src={puja.image}
                         alt="Profile"
@@ -115,40 +118,40 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Section */}
-            <div className="bg-gradient-to-r from-pink-200 to-blue-200 h-auto w-full md:h-[570px] md:w-[40%] shadow-2xl flex justify-center items-center">
+            <div className="bg-gradient-to-r from-pink-200 to-blue-200 h-[570px] w-full shadow-2xl flex justify-center items-center">
               <img
                 src={TrishulImage}
                 alt="Trishul"
-                className="w-40 md:w-96 h-auto ml-6 rounded-xl shadow-slate-400 hover:shadow-2xl"
+                className="w-96 h-50 ml-6 rounded-xl shadow-slate-400  hover:shadow-2xl"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="rounded-sm p-3 bg-gray-50 h-auto md:h-[460px] w-full flex flex-wrap space-y-4 md:space-x-3">
+      <div className="rounded-sm p-3 bg-gray-50 h-[460px] w-full flex space-x-3">
         {/* Cards Section */}
-        <div className="bg-gradient-to-r from-slate-400 to-slate-700 flex flex-wrap items-center justify-center p-4 gap-4 w-full md:flex-[2]">
+        <div className="bg-gradient-to-r from-slate-400 to-slate-700 flex flex-wrap items-center justify-center p-4 gap-4 flex-[2]  ">
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-full md:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-110 transition-transform duration-400"
+              className="bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-110 transition-transform duration-400"
             >
-              <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-300 mb-4">
+              <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-300 mb-4">
                 <img
                   src={card.image}
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h2 className="text-base md:text-lg font-bold">{card.name}</h2>
+              <h2 className="text-lg font-bold">{card.name}</h2>
+              {/* <p className="text-sm text-gray-500">Price: {card.price}</p> */}
             </div>
           ))}
         </div>
 
         {/* Right Side Section */}
-        <div className="bg-gradient-to-r from-blue-200 to-blue-300 w-full md:flex-1 flex items-center justify-center p-3">
+        <div className="bg-gradient-to-r from-blue-200 to-blue-300 flex-1 flex items-center justify-center p-3">
           <ImageCarousel />
         </div>
       </div>
@@ -157,24 +160,166 @@ const Home = () => {
         <TextCarousel />
       </div>
 
-      <div className="flex justify-center py-3">
+      <div className="flex justify-center py-3 ">
         <a
           href="/Puja"
-          className="font-bold text-lg md:text-xl text-slate-800 decoration-2 underline-offset-4 flex items-center transition duration-300 hover:text-[#d45505] hover:underline-offset-4"
+          className="font-bold text-xl text-slate-800 font-montserrat  decoration-2 underline-offset-4 flex items-center  transition duration-300 hover:text-[#d45505] hover:underline-offset-4"
         >
           View all Pujas
-          <span className="text-xl md:text-2xl items-center transition-transform duration-300 hover:translate-x-1">
+          <span className="text-2xl  items-center transition-transform duration-300 hover:translate-x-1">
             →
           </span>
         </a>
       </div>
 
-      <div className="py-4 bg-gradient-to-r from-blue-50 to-blue-100">
+      <div className="py-4 bg-gradient-to-r from-blue-50 to-blue-100 ">
         <Design />
       </div>
 
-      {/* Remaining Sections */}
-      {/* Ensure all sections like "Featured Sevas", "How to Join", etc., use similar responsiveness logic */}
+      <div
+        className=" bg-gradient-to-r from-blue-100 to-purple-200
+               "
+      >
+        <div className="p-2  py-6 ">
+          <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
+            Featured Sevas
+          </h1>
+          <div className="flex justify-center">
+            <div>
+              <p className="px-20  ">
+                <img
+                  src="https://divyadarshanm.in/wp-content/uploads/2024/11/1.svg"
+                  alt=""
+                />
+              </p>
+              <p className="font-bold font-montserrat text-2xl px-32">Pooja</p>
+            </div>
+            <div>
+              <p className="px-20  ">
+                <img
+                  src="https://divyadarshanm.in/wp-content/uploads/2024/11/2.svg"
+                  alt=""
+                />
+              </p>
+              <p className="font-bold font-montserrat text-2xl px-24">
+                Annadaan
+              </p>
+            </div>
+            <div>
+              <p className="px-20  ">
+                <img
+                  src="https://divyadarshanm.in/wp-content/uploads/2024/11/3.svg"
+                  alt=""
+                />
+              </p>
+              <p className="font-bold font-montserrat text-2xl px-32">
+                Gauseva
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="p-2 py-6 ">
+          <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
+            Know How wiil you Join The Pujas
+          </h1>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p>
+              <img
+                src={PoojaIcon}
+                alt="icon"
+                className="h-60 w-full rounded-full mb-6 "
+              />
+            </p>
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              01 Choose A Pooja
+            </p>
+          </div>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              02 Add Family Data
+            </p>
+            <p>
+              <img
+                src={FamilyIcon}
+                alt="icon"
+                className="h-60 w-full rounded-full mb-6 "
+              />
+            </p>
+          </div>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p>
+              <img
+                src={Icon}
+                alt="icon"
+                className="h-60 w-full rounded-full mb-6 "
+              />
+            </p>
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              03 Booking Complete
+            </p>
+          </div>
+          <div className="flex justify-center space-x-60 py-8">
+            {" "}
+            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+              04 Receive Blessing
+            </p>
+            <p>
+              <img
+                src={Bless}
+                alt="icon"
+                className="h-60 w-full rounded-full mb-6 "
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gray-100">
+        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
+          Our Puja Kshetras Across Multiple States in India
+        </h1>
+        <div className="p-6 flex justify-center h-[650px] w-full">
+          <img
+            className=" "
+            src="https://divyadarshanm.in/wp-content/uploads/2024/11/map.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        className=" bg-gradient-to-r from-blue-100 to-purple-200
+               "
+      >
+        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
+          Start Your Spritual Journey
+        </h1>
+        <div className="flex justify-center">
+          <Link
+            to="/Puja"
+            className="  bg-gradient-to-r from-blue-500 to-purple-500
+                hover:from-yellow-400 hover:to-orange-500 text-black py-2 px-6  rounded-sm text-[16px] font-montserrat  transition-all duration-300 transform hover:scale-105 mb-10"
+          >
+            Book Now
+          </Link>
+        </div>
+      </div>
+
+      <div className=" bg-gradient-to-r from-blue-200 to-purple-300">
+        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-3 ">
+          Devotees' Review
+        </h1>
+        <p className="font-bold text-xl font-montserrat text-gray-950 flex justify-center  ">
+          Hear it from our blessed devotees
+        </p>
+        <div>
+          <ReviewCarousel />
+        </div>
+      </div>
+
+      <FAQPage />
+      <Footer />
     </div>
   );
 };
