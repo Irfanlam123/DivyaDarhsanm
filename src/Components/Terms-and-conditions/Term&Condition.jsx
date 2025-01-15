@@ -1,146 +1,95 @@
-import React from "react";
-import Footer from "../Footer/Footer";
+import React, { useEffect, useState } from "react";
+import { MapPinIcon, CalendarDaysIcon } from "@heroicons/react/24/solid";
+import { Link, useNavigate } from "react-router-dom";
 
-const TermCondition = () => {
+function PujaCard({
+  title,
+  imageUrl,
+  location,
+  date,
+  participants,
+  targetDate,
+}) {
+  const [timeLeft, setTimeLeft] = useState({});
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const target = new Date(targetDate);
+      const diff = target - now;
+
+      if (diff <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      }
+    };
+
+    calculateTimeLeft();
+    const countdown = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(countdown);
+  }, [targetDate]);
+
+  const handleCardClick = () => {
+    navigate("/participate");
+  };
+
   return (
-    <div className="font-montserrat">
-      <div className="bg-gray-50 py-12 px-8 sm:px-16 lg:px-32">
-        <section className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
-            Terms and Conditions
-          </h1>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Please read the following terms carefully before using
-            Divyadarshanm.
+    <div
+      className="max-w-sm w-full h-[380px] bg-white rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 flex flex-col cursor-pointer md:max-w-xs sm:h-[350px] md:h-[380px] sm:w-[300px] md:w-[320px] lg:w-[350px] xl:w-[400px]"
+      onClick={handleCardClick}
+    >
+      <img
+        className="w-full h-32 sm:h-28 rounded-t-lg object-cover"
+        src={imageUrl}
+        alt={title}
+      />
+      <div className="flex flex-col flex-grow p-3">
+        <h2 className="text-md font-semibold text-gray-800 text-center sm:text-sm">
+          {title}
+        </h2>
+        <div className="mt-2 flex items-center text-blue-700 text-xs sm:text-sm">
+          <MapPinIcon className="h-4 w-4 mr-2" />
+          <p>{location}</p>
+        </div>
+        <div className="mt-1 flex items-center text-gray-600 text-xs sm:text-sm">
+          <CalendarDaysIcon className="h-4 w-4 mr-2" />
+          <p>{date}</p>
+        </div>
+        <div className="mt-3 text-center">
+          <p className="text-sm font-bold text-blue-600">
+            {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
+            {timeLeft.seconds}s
           </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            1. Acceptance of Terms
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            By accessing or using Divyadarshanm, you agree to comply with these
-            Terms. If you do not agree to these Terms, please refrain from using
-            Divyadarshanm.
-          </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            2. Permitted Use of Divyadarshanm
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            You agree not to use Divyadarshanm in a manner that could disrupt
-            the service or violate applicable laws. Below are the activities you
-            should avoid:
-          </p>
-          <ul className="list-decimal pl-6 space-y-4 text-lg text-gray-700">
-            <li>Violate any applicable laws or regulations.</li>
-            <li>Infringe upon the rights of others.</li>
-            <li>Disrupt the operation of Divyadarshanm.</li>
-            <li>Attempt to access unauthorized areas or systems.</li>
-            <li>
-              Engage in harmful activities affecting users or the platform.
-            </li>
-          </ul>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            3. User Accounts
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Certain features may require the creation of a user account. You are
-            responsible for maintaining the confidentiality of your account
-            information and ensuring that all activities under your account
-            comply with these Terms.
-          </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            4. Intellectual Property Rights
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            All content, features, and services on Divyadarshanm are protected
-            by intellectual property laws. Unauthorized use or reproduction of
-            any content without prior written consent is prohibited.
-          </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            5. Third-Party Links and Services
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Divyadarshanm may link to third-party websites or services. We are
-            not responsible for their content or practices. Your interactions
-            with such third parties are subject to their own terms and policies.
-          </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            6. Disclaimer of Warranties
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Divyadarshanm is provided “as is” without warranties. We do not
-            guarantee the accuracy, reliability, or completeness of the services
-            or content provided.
-          </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            7. Limitation of Liability
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Divyadarshanm and its affiliates are not liable for any indirect or
-            consequential damages arising from your use of the platform.
-          </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            8. Changes to Terms
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            We reserve the right to modify these Terms at any time. Changes will
-            be posted, and continued use of Divyadarshanm signifies acceptance
-            of the updated Terms.
-          </p>
-        </section>
-
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            9. Contact Us
-          </h2>
-          <p className="text-lg text-gray-700 mb-6">
-            For any questions or concerns, please reach out to us at:
-          </p>
-          <div className="space-y-4">
-            <p className="text-lg text-gray-700">
-              <strong>Email:</strong>{" "}
-              <a
-                href="mailto:support@Divyadarshanm.in"
-                className="text-blue-500 hover:underline"
-              >
-                support@Divyadarshanm.in
-              </a>
+        </div>
+        <div className="flex flex-col mt-3">
+          <div className="border-b border-gray-300 my-3"></div>
+          <div className="flex justify-between items-center">
+            <p className="mt-2 text-xs text-gray-600 sm:text-sm">
+              <strong>{participants}</strong> have booked.
             </p>
-            <p className="text-lg text-gray-700">
-              <strong>Phone:</strong> +91 7991522694
-            </p>
-            <p className="text-lg text-gray-700 mt-4">
-              Thank you for choosing Divyadarshanm.
-            </p>
+
+            <Link
+              to="/participate"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-block px-3 py-2 text-xs sm:text-sm text-white 
+              bg-gradient-to-r from-blue-500 to-purple-500
+               rounded-md hover:from-yellow-400 hover:to-orange-500 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-all duration-300"
+            >
+              Participate Now
+            </Link>
           </div>
-        </section>
+        </div>
       </div>
-      <Footer />
     </div>
   );
-};
+}
 
-export default TermCondition;
+export default PujaCard;

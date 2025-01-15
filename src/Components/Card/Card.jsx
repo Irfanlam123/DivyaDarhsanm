@@ -31,12 +31,12 @@ const Design = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 p-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
       {cardData.map((card) => (
         <div
           key={card.id}
           onClick={() => handleNavigation(card.id)}
-          className="w-72 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105 flex flex-col overflow-hidden cursor-pointer"
+          className="w-full max-w-sm bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105 flex flex-col overflow-hidden cursor-pointer mx-auto"
         >
           {/* Card Image */}
           <img
@@ -46,7 +46,7 @@ const Design = () => {
           />
           {/* Card Content */}
           <div className="p-4 flex flex-col flex-grow justify-between">
-            <h3 className="text-md font-semibold text-gray-800 text-center">
+            <h3 className="text-lg font-semibold text-gray-800 text-center">
               {card.heading}
             </h3>
             <p className="text-sm text-gray-600 mt-2 text-center leading-relaxed">
@@ -58,8 +58,7 @@ const Design = () => {
                 e.stopPropagation(); // Prevents card click event
                 handleNavigation(card.id);
               }}
-              className="mt-4  bg-gradient-to-r from-blue-500 to-purple-500
-                hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 self-center"
+              className="mt-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 self-center"
             >
               Book Now
             </button>

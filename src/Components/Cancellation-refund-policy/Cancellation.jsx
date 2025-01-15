@@ -4,27 +4,27 @@ import Footer from "../Footer/Footer";
 const Cancellation = () => {
   return (
     <div className="font-montserrat">
-      <div className="bg-gray-50 py-12 px-8 sm:px-16 lg:px-32">
+      <div className="bg-gray-50 py-12 px-6 sm:px-8 md:px-16 lg:px-32">
         <section className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
             Cancellation and Refund Policy
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
             Learn about our policies for cancellations and refunds to ensure a
             smooth experience with Divyadarshanm.
           </p>
         </section>
 
-        <section className="bg-white shadow-md rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+        <section className="bg-white shadow-md rounded-lg p-6 sm:p-8 mb-12">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-6">
             Understanding Our Policies
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
             We value your trust and aim to provide transparent policies to guide
             you through our services. Please review the following guidelines for
             cancellations and refunds:
           </p>
-          <ol className="list-decimal pl-6 space-y-4 text-lg text-gray-700">
+          <ol className="list-decimal pl-5 sm:pl-6 space-y-4 text-base sm:text-lg text-gray-700">
             <li>
               <strong>Order Cancellations:</strong> While cancellations are
               generally not accommodated, exceptional cases like accidental
@@ -47,16 +47,16 @@ const Cancellation = () => {
           </ol>
         </section>
 
-        <section className="bg-white shadow-md rounded-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+        <section className="bg-white shadow-md rounded-lg p-6 sm:p-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-6">
             Contact Us
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
             If you have any questions or concerns regarding cancellations or
             refunds, our team is here to help. Reach out to us:
           </p>
           <div className="space-y-4">
-            <p className="text-lg text-gray-700">
+            <p className="text-lg sm:text-xl text-gray-700">
               <strong>Email:</strong>{" "}
               <a
                 href="mailto:support@divyadarshanm.com"
@@ -65,7 +65,7 @@ const Cancellation = () => {
                 support@divyadarshanm.com
               </a>
             </p>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg sm:text-xl text-gray-700">
               <strong>Phone:</strong> +91 7991522694
             </p>
           </div>

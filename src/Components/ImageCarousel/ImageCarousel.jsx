@@ -7,6 +7,7 @@ import Temp2 from "../../../src/assets/temp2.jpg";
 // import Temp3 from "../../../src/assets/temp3.jpg";
 import Temp4 from "../../../src/assets/Temp4.jpg";
 import Temp5 from "../../../src/assets/temp5.jpg";
+
 const ImageCarousel = () => {
   const images = [
     // {
@@ -37,7 +38,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="carousel-container h-[400px] w-full ">
+    <div className="carousel-container w-full">
       <Carousel
         showArrows={true}
         autoPlay={true}
@@ -51,7 +52,7 @@ const ImageCarousel = () => {
             <img
               src={image.src}
               alt={image.alt}
-              className="h-[400px] w-full object-cover rounded-md"
+              className="w-full object-cover rounded-md h-[250px] sm:h-[400px]"
             />
           </div>
         ))}
