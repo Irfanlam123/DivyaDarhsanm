@@ -9,11 +9,11 @@ import { GiByzantinTemple } from "react-icons/gi";
 import { FaHandsWash } from "react-icons/fa";
 import FAQs from "../Home/Components/FAQs";
 import FAQPage from "../Home/Components/FAQs";
-import Icon from "../../../src/assets/Homepage/BookingComplete.webp";
+import BookingIcon from "../../../src/assets/Homepage/BookingComplete.webp";
 import PoojaIcon from "../../../src/assets/Homepage/Pooja.webp";
 import FamilyIcon from "../../../src/assets/Homepage/AddFamily.webp";
 import ReviewCarousel from "../ImageCarousel/ReviewsText";
-import Bless from "../../assets/Homepage/Bless.webp";
+import BlesingIcon from "../../assets/Homepage/Bless.webp";
 import HeroImage from "../../assets/HeroImg.webp"
 
 const Home = () => {
@@ -46,31 +46,23 @@ const Home = () => {
   const cardData = [
     {
       id: 1,
-      name: "Something1",
-      image:
-        "https://images.pexels.com/photos/18287935/pexels-photo-18287935/free-photo-of-view-of-arulmigu-ramanathaswamy-temple-in-rameshwaram.jpeg?auto=compress&cs=tinysrgb&w=600",
-      price: "35/minutes",
+      name: "Choose Pooja",
+      src: PoojaIcon,
     },
     {
       id: 2,
-      name: "Something2",
-      image:
-        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
-      price: "35/m",
+      name: "Add Family Data",
+      src: FamilyIcon,
     },
     {
       id: 3,
-      name: "Something3",
-      image:
-        "https://images.pexels.com/photos/18892582/pexels-photo-18892582/free-photo-of-japan-wallpapers.jpeg?auto=compress&cs=tinysrgb&w=600",
-      price: "35/m",
+      name: "Booking Complete",
+      src: BookingIcon,
     },
     {
       id: 4,
-      name: "Something4",
-      image:
-        "https://images.pexels.com/photos/27941934/pexels-photo-27941934/free-photo-of-ancient-city-bangkok.jpeg?auto=compress&cs=tinysrgb&w=600",
-      price: "35/m",
+      name: "Receive Blessing",
+      src: BlesingIcon,
     },
   ];
   return (
@@ -120,16 +112,21 @@ const Home = () => {
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-full sm:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-105 transition-transform duration-300"
+              className="relative bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-full sm:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-105 transition-transform duration-300 overflow-hidden"
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-gray-300 mb-4">
+              {/* Title text positioned over the image */}
+              <h2 className="absolute top-2 left-2 right-2 text-lg font-bold text-white bg-black/50  py-0 rounded-full text-center">
+                {card.name}
+              </h2>
+
+              {/* Image container */}
+              <div className="w-full h-full overflow-hidden bg-gray-300">
                 <img
-                  src={card.image}
+                  src={card.src}
                   alt=""
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
-              <h2 className="text-lg font-bold">{card.name}</h2>
             </div>
           ))}
         </div>
@@ -157,7 +154,6 @@ const Home = () => {
       </div>
 
       <div className="py-4 bg-gradient-to-r from-blue-50 to-blue-100 ">
-        <Design />
         <Design />
         <Design />
       </div>
@@ -204,60 +200,6 @@ const Home = () => {
                 Gauseva
               </p>
             </div>
-          </div>
-        </div>
-
-        <div className="p-4 py-6 w-full max-w-[90%] mx-auto">
-          <h1 className="font-bold text-2xl md:text-3xl font-montserrat text-orange-400 text-center">
-            Know How You Will Join The Pujas
-          </h1>
-
-          {/* Step 1 */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-20 py-6">
-            <img
-              src={PoojaIcon}
-              alt="icon"
-              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
-            />
-            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
-              01 Choose A Pooja
-            </p>
-          </div>
-
-          {/* Step 2 */}
-          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-20 py-6">
-            <img
-              src={FamilyIcon}
-              alt="icon"
-              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
-            />
-            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
-              02 Add Family Data
-            </p>
-          </div>
-
-          {/* Step 3 */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-20 py-6">
-            <img
-              src={Icon}
-              alt="icon"
-              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
-            />
-            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
-              03 Booking Complete
-            </p>
-          </div>
-
-          {/* Step 4 */}
-          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-20 py-6">
-            <img
-              src={Bless}
-              alt="icon"
-              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
-            />
-            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
-              04 Receive Blessing
-            </p>
           </div>
         </div>
       </div>
