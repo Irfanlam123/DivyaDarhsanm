@@ -164,7 +164,7 @@ const Home = () => {
       </div>
 
       <div
-        className=" bg-gradient-to-r from-blue-100 to-purple-200
+        className=" bg-gradient-to-r from-blue-100 to-slate-300
                "
       >
         <div className="p-2 py-6">
@@ -173,7 +173,7 @@ const Home = () => {
           </h1>
           <div className="flex flex-wrap justify-center gap-8 mt-6">
             <div className="text-center">
-              <p className="px-10 md:px-20">
+              <p className="px-10 md:px-20 shadow-xl">
                 <img
                   src="https://divyadarshanm.in/wp-content/uploads/2024/11/1.svg"
                   alt=""
@@ -184,7 +184,7 @@ const Home = () => {
               </p>
             </div>
             <div className="text-center">
-              <p className="px-10 md:px-20">
+              <p className="px-10 md:px-20 shadow-xl">
                 <img
                   src="https://divyadarshanm.in/wp-content/uploads/2024/11/2.svg"
                   alt=""
@@ -195,7 +195,7 @@ const Home = () => {
               </p>
             </div>
             <div className="text-center">
-              <p className="px-10 md:px-20">
+              <p className="px-10 md:px-20 shadow-xl">
                 <img
                   src="https://divyadarshanm.in/wp-content/uploads/2024/11/3.svg"
                   alt=""
