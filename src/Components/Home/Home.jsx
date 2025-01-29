@@ -209,7 +209,7 @@ const Home = () => {
         </div>
       </div>
       <div className="bg-gray-100">
-        <h1 className="font-bold text-3xl md:text-4xl font-montserrat text-orange-400 flex justify-center py-6 px-4 md:px-0">
+        <h1 className="font-bold text-2xl md:text-xl font-montserrat text-orange-400 flex justify-center py-6 px-4 md:px-0">
           Our Puja Kshetras Across Multiple States in India
         </h1>
 
