@@ -80,64 +80,49 @@ const Home = () => {
           <div className="flex w-full ">
             <div className="bg-gradient-to-r from-blue-200 to-blue-300 h-[570px] w-[1700px]  items-center ">
               {/* <ImageCarousel /> */}
-              <div className="flex flex-col mt-56 justify-center">
-                <h1 className="flex justify-center text-4xl font-bold   font-montserrat">
+              <div className="flex flex-col justify-center items-center text-center w-full max-w-[80%] md:max-w-[60%] mx-auto h-screen">
+                <h1 className="text-3xl md:text-5xl font-bold font-montserrat text-gray-900">
                   Your Way to
                 </h1>
-                <p className="flex justify-center  text-blue-950 text-4xl font-bold font-montserrat">
+                <p className="text-2xl md:text-5xl font-bold font-montserrat text-blue-950">
                   Sanatan Dharma!
                 </p>
-                <p className=" flex justify-center  mt-4 text-lg text-blue-600 font-bold">
+                <p className="mt-4 md:mt-6 text-base md:text-lg text-blue-600 font-bold">
                   Daily darshans, Puja rituals, and Chadhava offerings, all in
                   one.
                 </p>
-                <div className="flex justify-center py-6">
+                <div className="py-6 md:py-8">
                   <Link
                     to="/Puja"
-                    className="inline-block bg-slate-950 text-slate-50 py-2 font-semibold px-16 rounded-md text-[16px] font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105"
+                    className="inline-block bg-slate-950 text-white py-3 px-10 md:px-20 rounded-md text-lg md:text-xl font-semibold font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg"
                   >
                     Puja Now
                   </Link>
                 </div>
               </div>
-              <div className="py-6 flex flex-wrap justify-center gap-6">
-                {pujaProcess.map((puja) => (
-                  <div key={puja.id} className="flex flex-col items-center">
-                    <h3 className="text-xs sm:text-sm font-medium text-gray-700">
-                      {puja.title || "Puja"}
-                    </h3>
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-300 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110">
-                      <img
-                        src={puja.image}
-                        alt="Puja Image"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+            
+            
             </div>
-
             <div className="bg-gradient-to-r from-pink-200 to-blue-200 h-64 sm:h-80 md:h-96 lg:h-[570px] w-full shadow-2xl flex justify-center items-center">
               <img
                 src={TrishulImage}
                 alt="Trishul"
-                className="w-48 h-32 sm:w-64 sm:h-40 md:w-80 md:h-50 lg:w-96 lg:h-60 rounded-xl shadow-slate-400 hover:shadow-2xl transition-all duration-300"
+                className="w-40 h-auto sm:w-56 sm:h-auto md:w-72 md:h-auto lg:w-96 rounded-xl shadow-slate-400 hover:shadow-2xl transition-all duration-300 object-contain"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="rounded-sm p-3 bg-gray-50 h-[460px] w-full flex space-x-3">
+      <div className="rounded-sm p-3 bg-gray-50 w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-3">
         {/* Cards Section */}
-        <div className="bg-gradient-to-r from-slate-400 to-slate-700 flex flex-wrap items-center justify-center p-4 gap-4 flex-[2]  ">
+        <div className="bg-gradient-to-r from-slate-400 to-slate-700 flex flex-wrap items-center justify-center p-4 gap-4 flex-[2] w-full md:w-2/3">
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-110 transition-transform duration-400"
+              className="bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-full sm:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-105 transition-transform duration-300"
             >
-              <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-300 mb-4">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-gray-300 mb-4">
                 <img
                   src={card.image}
                   alt=""
@@ -145,18 +130,17 @@ const Home = () => {
                 />
               </div>
               <h2 className="text-lg font-bold">{card.name}</h2>
-              {/* <p className="text-sm text-gray-500">Price: {card.price}</p> */}
             </div>
           ))}
         </div>
 
         {/* Right Side Section */}
-        <div className="bg-gradient-to-r from-blue-200 to-blue-300 flex-1 flex items-center justify-center p-3">
+        <div className="bg-gradient-to-r from-blue-200 to-blue-300 flex-1 flex items-center justify-center p-3 w-full md:w-1/3 h-64 md:h-auto">
           <ImageCarousel />
         </div>
       </div>
 
-      <div className="text-center py-6">
+      <div className="text-center py-4 md:py-6 px-4 max-w-screen-md mx-auto">
         <TextCarousel />
       </div>
 
