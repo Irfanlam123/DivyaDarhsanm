@@ -252,43 +252,43 @@ const Home = () => {
         </div>
       </div>
       <div className="bg-gray-100">
-        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
+        <h1 className="font-bold text-3xl md:text-4xl font-montserrat text-orange-400 flex justify-center py-6 px-4 md:px-0">
           Our Puja Kshetras Across Multiple States in India
         </h1>
-        <div className="p-6 flex justify-center h-[650px] w-full">
+
+        <div className="p-6 flex justify-center items-center w-full">
           <img
-            className=" "
+            className="w-full max-w-[90%] sm:max-w-[75%] md:max-w-[60%] lg:max-w-[50%] h-auto object-contain"
             src="https://divyadarshanm.in/wp-content/uploads/2024/11/map.svg"
-            alt=""
+            alt="Puja Kshetras Map"
           />
         </div>
       </div>
-      <div
-        className=" bg-gradient-to-r from-blue-100 to-purple-200
-               "
-      >
-        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-6 ">
-          Start Your Spritual Journey
+
+      <div className="bg-gradient-to-r from-blue-100 to-purple-200">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-400 flex justify-center py-6 px-4 sm:px-0">
+          Start Your Spiritual Journey
         </h1>
+
         <div className="flex justify-center">
           <Link
             to="/Puja"
-            className="  bg-gradient-to-r from-blue-500 to-purple-500
-                hover:from-yellow-400 hover:to-orange-500 text-black py-2 px-6  rounded-sm text-[16px] font-montserrat  transition-all duration-300 transform hover:scale-105 mb-10"
+            className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-400 hover:to-orange-500 text-black py-2 px-6 rounded-sm text-sm sm:text-base md:text-lg font-montserrat transition-all duration-300 transform hover:scale-105 mb-10"
           >
             Book Now
           </Link>
         </div>
       </div>
 
-      <div className=" bg-gradient-to-r from-blue-200 to-purple-300">
-        <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center py-3 ">
+      <div className="bg-gradient-to-r from-blue-200 to-purple-300 py-6">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-400 text-center">
           Devotees' Review
         </h1>
-        <p className="font-bold text-xl font-montserrat text-gray-950 flex justify-center  ">
+        <p className="font-bold text-lg sm:text-xl md:text-2xl font-montserrat text-gray-950 text-center mt-2">
           Hear it from our blessed devotees
         </p>
-        <div>
+
+        <div className="mt-8 px-4 sm:px-6 md:px-12">
           <ReviewCarousel />
         </div>
       </div>
