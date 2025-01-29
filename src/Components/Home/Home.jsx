@@ -14,6 +14,7 @@ import PoojaIcon from "../../../src/assets/Homepage/Pooja.webp";
 import FamilyIcon from "../../../src/assets/Homepage/AddFamily.webp";
 import ReviewCarousel from "../ImageCarousel/ReviewsText";
 import Bless from "../../assets/Homepage/Bless.webp";
+import HeroImage from "../../assets/HeroImg.webp"
 
 const Home = () => {
   const pujaProcess = [
@@ -77,23 +78,32 @@ const Home = () => {
       <div className="relative p-2 shadow-2xl">
         <div className="flex flex-col justify-center items-center ">
           {/* Div Sections */}
-          <div className="flex w-full ">
-            <div className="bg-gradient-to-r from-blue-200 to-blue-300 w-full h-80 flex justify-center items-center">
-              <div className="flex flex-col justify-center items-center text-center w-full max-w-[90%] md:max-w-[70%] mx-auto">
-                <h1 className="text-3xl md:text-5xl font-bold font-montserrat text-gray-900">
+          <div className="relative w-full ">
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-200 to-blue-300"></div>{" "}
+            {/* Background Gradient */}
+            <div className="relative z-10 w-full h-full">
+              <img
+                src={HeroImage} // Replace 'HeroImage' with the actual image path or import
+                alt="Hero Image"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black opacity-40 backdrop-blur-md"></div>{" "}
+              {/* Overlay with slight blur for better text visibility */}
+              <div className="relative z-10 flex flex-col justify-center items-center text-center w-full px-6 sm:px-12 md:max-w-[70%] mx-auto py-12">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat text-white mb-4 shadow-lg">
                   Your Way to
                 </h1>
-                <p className="text-2xl md:text-5xl font-bold font-montserrat text-blue-950">
+                <p className="text-2xl sm:text-3xl md:text-4xl font-bold font-montserrat text-orange-600 mb-4 shadow-lg">
                   Sanatan Dharma!
                 </p>
-                <p className="mt-4 md:mt-6 text-base md:text-lg text-blue-600 font-semibold">
+                <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-lg text-slate-100 font-semibold mb-6 shadow-lg">
                   Daily darshans, Puja rituals, and Chadhava offerings, all in
                   one.
                 </p>
                 <div className="py-6 md:py-8">
                   <Link
                     to="/Puja"
-                    className="inline-block bg-slate-950 text-white py-3 px-12 md:px-16 rounded-md text-lg md:text-xl font-semibold font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="inline-block bg-slate-100 text-gray-950 py-2 px-5 sm:px-6 md:px-6 rounded-full text-sm sm:text-sm font-semibold font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Puja Now
                   </Link>
