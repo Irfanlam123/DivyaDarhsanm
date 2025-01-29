@@ -78,37 +78,27 @@ const Home = () => {
         <div className="flex flex-col justify-center items-center ">
           {/* Div Sections */}
           <div className="flex w-full ">
-            <div className="bg-gradient-to-r from-blue-200 to-blue-300 h-[570px] w-[1700px]  items-center ">
-              {/* <ImageCarousel /> */}
-              <div className="flex flex-col justify-center items-center text-center w-full max-w-[80%] md:max-w-[60%] mx-auto h-screen">
+            <div className="bg-gradient-to-r from-blue-200 to-blue-300 w-full h-80 flex justify-center items-center">
+              <div className="flex flex-col justify-center items-center text-center w-full max-w-[90%] md:max-w-[70%] mx-auto">
                 <h1 className="text-3xl md:text-5xl font-bold font-montserrat text-gray-900">
                   Your Way to
                 </h1>
                 <p className="text-2xl md:text-5xl font-bold font-montserrat text-blue-950">
                   Sanatan Dharma!
                 </p>
-                <p className="mt-4 md:mt-6 text-base md:text-lg text-blue-600 font-bold">
+                <p className="mt-4 md:mt-6 text-base md:text-lg text-blue-600 font-semibold">
                   Daily darshans, Puja rituals, and Chadhava offerings, all in
                   one.
                 </p>
                 <div className="py-6 md:py-8">
                   <Link
                     to="/Puja"
-                    className="inline-block bg-slate-950 text-white py-3 px-10 md:px-20 rounded-md text-lg md:text-xl font-semibold font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg"
+                    className="inline-block bg-slate-950 text-white py-3 px-12 md:px-16 rounded-md text-lg md:text-xl font-semibold font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Puja Now
                   </Link>
                 </div>
               </div>
-            
-            
-            </div>
-            <div className="bg-gradient-to-r from-pink-200 to-blue-200 h-64 sm:h-80 md:h-96 lg:h-[570px] w-full shadow-2xl flex justify-center items-center">
-              <img
-                src={TrishulImage}
-                alt="Trishul"
-                className="w-40 h-auto sm:w-56 sm:h-auto md:w-72 md:h-auto lg:w-96 rounded-xl shadow-slate-400 hover:shadow-2xl transition-all duration-300 object-contain"
-              />
             </div>
           </div>
         </div>
@@ -158,6 +148,8 @@ const Home = () => {
 
       <div className="py-4 bg-gradient-to-r from-blue-50 to-blue-100 ">
         <Design />
+        <Design />
+        <Design />
       </div>
 
       <div
@@ -205,60 +197,56 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="p-2 py-6 ">
-          <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
-            Know How wiil you Join The Pujas
+        <div className="p-4 py-6 w-full max-w-[90%] mx-auto">
+          <h1 className="font-bold text-2xl md:text-3xl font-montserrat text-orange-400 text-center">
+            Know How You Will Join The Pujas
           </h1>
-          <div className="flex justify-center space-x-60 py-8">
-            {" "}
-            <p>
-              <img
-                src={PoojaIcon}
-                alt="icon"
-                className="h-60 w-full rounded-full mb-6 "
-              />
-            </p>
-            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+
+          {/* Step 1 */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-20 py-6">
+            <img
+              src={PoojaIcon}
+              alt="icon"
+              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
+            />
+            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
               01 Choose A Pooja
             </p>
           </div>
-          <div className="flex justify-center space-x-60 py-8">
-            {" "}
-            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+
+          {/* Step 2 */}
+          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-20 py-6">
+            <img
+              src={FamilyIcon}
+              alt="icon"
+              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
+            />
+            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
               02 Add Family Data
             </p>
-            <p>
-              <img
-                src={FamilyIcon}
-                alt="icon"
-                className="h-60 w-full rounded-full mb-6 "
-              />
-            </p>
           </div>
-          <div className="flex justify-center space-x-60 py-8">
-            {" "}
-            <p>
-              <img
-                src={Icon}
-                alt="icon"
-                className="h-60 w-full rounded-full mb-6 "
-              />
-            </p>
-            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+
+          {/* Step 3 */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-20 py-6">
+            <img
+              src={Icon}
+              alt="icon"
+              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
+            />
+            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
               03 Booking Complete
             </p>
           </div>
-          <div className="flex justify-center space-x-60 py-8">
-            {" "}
-            <p className="text-2xl font-bold font-montserrat py-16 text-orange-400">
+
+          {/* Step 4 */}
+          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-20 py-6">
+            <img
+              src={Bless}
+              alt="icon"
+              className="h-40 w-40 md:h-60 md:w-60 rounded-full mb-4 md:mb-0"
+            />
+            <p className="text-xl md:text-2xl font-bold font-montserrat text-orange-400 text-center md:text-left">
               04 Receive Blessing
-            </p>
-            <p>
-              <img
-                src={Bless}
-                alt="icon"
-                className="h-60 w-full rounded-full mb-6 "
-              />
             </p>
           </div>
         </div>
