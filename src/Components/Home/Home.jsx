@@ -118,11 +118,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-pink-200 to-blue-200 h-[570px] w-full shadow-2xl flex justify-center items-center">
+            <div className="bg-gradient-to-r from-pink-200 to-blue-200 h-64 sm:h-80 md:h-96 lg:h-[570px] w-full shadow-2xl flex justify-center items-center">
               <img
                 src={TrishulImage}
                 alt="Trishul"
-                className="w-96 h-50 ml-6 rounded-xl shadow-slate-400  hover:shadow-2xl"
+                className="w-48 h-32 sm:w-64 sm:h-40 md:w-80 md:h-50 lg:w-96 lg:h-60 rounded-xl shadow-slate-400 hover:shadow-2xl transition-all duration-300"
               />
             </div>
           </div>
@@ -180,44 +180,47 @@ const Home = () => {
         className=" bg-gradient-to-r from-blue-100 to-purple-200
                "
       >
-        <div className="p-2  py-6 ">
-          <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
+        <div className="p-2 py-6">
+          <h1 className="font-bold text-3xl font-montserrat text-orange-400 text-center">
             Featured Sevas
           </h1>
-          <div className="flex justify-center">
-            <div>
-              <p className="px-20  ">
+          <div className="flex flex-wrap justify-center gap-8 mt-6">
+            <div className="text-center">
+              <p className="px-10 md:px-20">
                 <img
                   src="https://divyadarshanm.in/wp-content/uploads/2024/11/1.svg"
                   alt=""
                 />
               </p>
-              <p className="font-bold font-montserrat text-2xl px-32">Pooja</p>
+              <p className="font-bold font-montserrat text-2xl px-10 md:px-32">
+                Pooja
+              </p>
             </div>
-            <div>
-              <p className="px-20  ">
+            <div className="text-center">
+              <p className="px-10 md:px-20">
                 <img
                   src="https://divyadarshanm.in/wp-content/uploads/2024/11/2.svg"
                   alt=""
                 />
               </p>
-              <p className="font-bold font-montserrat text-2xl px-24">
+              <p className="font-bold font-montserrat text-2xl px-10 md:px-24">
                 Annadaan
               </p>
             </div>
-            <div>
-              <p className="px-20  ">
+            <div className="text-center">
+              <p className="px-10 md:px-20">
                 <img
                   src="https://divyadarshanm.in/wp-content/uploads/2024/11/3.svg"
                   alt=""
                 />
               </p>
-              <p className="font-bold font-montserrat text-2xl px-32">
+              <p className="font-bold font-montserrat text-2xl px-10 md:px-32">
                 Gauseva
               </p>
             </div>
           </div>
         </div>
+
         <div className="p-2 py-6 ">
           <h1 className="font-bold text-3xl font-montserrat text-orange-400 flex justify-center">
             Know How wiil you Join The Pujas
