@@ -100,16 +100,16 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-              <div className="py-8 flex justify-center">
+              <div className="py-6 flex flex-wrap justify-center gap-6">
                 {pujaProcess.map((puja) => (
-                  <div key={puja.id}>
-                    <h3 className=" text-sm  px-4 text-gray-700">
-                      Puja..........
+                  <div key={puja.id} className="flex flex-col items-center">
+                    <h3 className="text-xs sm:text-sm font-medium text-gray-700">
+                      {puja.title || "Puja"}
                     </h3>
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-300 mb-4 space-y-2 hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-300 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110">
                       <img
                         src={puja.image}
-                        alt="Profile"
+                        alt="Puja Image"
                         className="w-full h-full object-cover"
                       />
                     </div>
