@@ -54,7 +54,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
-            className="text-gray-900"
+            className="text-gray-900 bg-gray-300 px-2"
             aria-label="Toggle Menu"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -87,9 +87,7 @@ const Navbar = () => {
             <button className="block w-full bg-slate-50 text-neutral-700 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200">
               Login
             </button>
-            <button className="block w-full bg-slate-50 py-2 border-2 rounded-md shadow-md hover:bg-slate-900 hover:font-semibold hover:text-white transition duration-200">
-              Signup
-            </button>
+           
           </div>
         </div>
       )}

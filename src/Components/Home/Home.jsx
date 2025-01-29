@@ -70,17 +70,22 @@ const Home = () => {
       <div className="relative p-2 shadow-2xl">
         <div className="flex flex-col justify-center items-center ">
           {/* Div Sections */}
-          <div className="relative w-full ">
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-200 to-blue-300"></div>{" "}
+          <div className="relative w-full overflow-hidden rounded-md">
             {/* Background Gradient */}
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-200 to-blue-300"></div>
+
             <div className="relative z-10 w-full h-full">
+              {/* Hero Image with Rounded Corners */}
               <img
-                src={HeroImage} // Replace 'HeroImage' with the actual image path or import
+                src={HeroImage}
                 alt="Hero Image"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black opacity-40 backdrop-blur-md"></div>{" "}
-              {/* Overlay with slight blur for better text visibility */}
+
+              {/* Overlay for Better Text Visibility */}
+              <div className="absolute inset-0 bg-black opacity-40 backdrop-blur-md"></div>
+
+              {/* Hero Content */}
               <div className="relative z-10 flex flex-col justify-center items-center text-center w-full px-6 sm:px-12 md:max-w-[70%] mx-auto py-12">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat text-white mb-4 shadow-lg">
                   Your Way to
@@ -108,15 +113,15 @@ const Home = () => {
 
       <div className="rounded-sm p-3 bg-gray-50 w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-3">
         {/* Cards Section */}
-        <div className="bg-gradient-to-r from-slate-400 to-slate-700 flex flex-wrap items-center justify-center p-4 gap-4 flex-[2] w-full md:w-2/3">
+        <div className=" flex flex-wrap items-center justify-center p-4 gap-4 flex-[2] w-full md:w-2/3">
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="relative bg-gradient-to-r from-pink-100 to-blue-100 flex flex-col w-full sm:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-105 transition-transform duration-300 overflow-hidden"
+              className="relative bg-gradient-to-r from-blue-100 to-slate-300 flex flex-col w-full sm:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-105 transition-transform duration-300 overflow-hidden"
             >
               {/* Title text positioned over the image */}
               <h2 className="absolute top-2 left-2 right-2 text-lg font-bold text-white bg-black/50  py-0 rounded-full text-center">
-                {card.name}
+                
               </h2>
 
               {/* Image container */}
@@ -124,7 +129,7 @@ const Home = () => {
                 <img
                   src={card.src}
                   alt=""
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover rounded-lg"
                 />
               </div>
             </div>
@@ -132,7 +137,7 @@ const Home = () => {
         </div>
 
         {/* Right Side Section */}
-        <div className="bg-gradient-to-r from-blue-200 to-blue-300 flex-1 flex items-center justify-center p-3 w-full md:w-1/3 h-64 md:h-auto">
+        <div className="bg-gradient-to-r from-blue-200 to-blue-300 flex-1 flex items-center justify-center rounded-lg p-3 w-full md:w-1/3 h-64 md:h-auto">
           <ImageCarousel />
         </div>
       </div>
