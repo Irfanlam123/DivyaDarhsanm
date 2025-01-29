@@ -223,7 +223,7 @@ const Home = () => {
       </div>
 
       <div className="bg-gradient-to-r from-blue-100 to-purple-200">
-        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-400 flex justify-center py-6 px-4 sm:px-0">
+        <h1 className="font-bold text-xl sm:text-xl md:text-2xl font-montserrat text-orange-400 flex justify-center py-6 px-4 sm:px-0">
           Start Your Spiritual Journey
         </h1>
 
