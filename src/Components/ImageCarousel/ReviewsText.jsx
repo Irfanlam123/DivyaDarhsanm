@@ -33,6 +33,7 @@ const ReviewCarousel = () => {
           className="w-40 h-40 object-cover rounded-full shadow-md"
         />
       </div>
+      
     </div>
   );
 };

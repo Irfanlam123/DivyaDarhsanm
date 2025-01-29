@@ -301,6 +301,16 @@ const Home = () => {
         <div className="mt-8 px-4 sm:px-6 md:px-12">
           <ReviewCarousel />
         </div>
+
+        {/* Reviews Button */}
+        <div className="text-center mt-6">
+          <Link
+            to="/reviews-form"
+            className="inline-block bg-orange-500 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Submit Your Review
+          </Link>
+        </div>
       </div>
 
       <FAQPage />

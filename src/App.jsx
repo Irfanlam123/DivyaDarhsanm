@@ -9,6 +9,8 @@ import Participate from "./Components/Home/Components/participate";
 import Cancellation from "./Components/Cancellation-refund-policy/Cancellation";
 import TermCondition from "./Components/Terms-and-conditions/Term&Condition";
 import PrivacyPolicy from "./Components/Privacy-policy/PrivacyPolicy";
+import ReviewsForm from "./Components/Home/reviesForm";
+
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
         <Route path="/cancellation" element={<Cancellation />} />{" "}
         <Route path="/Term&Condition" element={<TermCondition />} />{" "}
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/reviews-form" element={<ReviewsForm />} />
       </Routes>
     </Router>
   );
