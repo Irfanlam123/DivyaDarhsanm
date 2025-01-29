@@ -4,12 +4,27 @@ const ReviewsForm = () => {
   const [name, setName] = useState("");
   const [pooja, setPooja] = useState("");
   const [review, setReview] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false); // Track if the form is submitted
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add form submission logic (e.g., sending data to an API or saving it)
     alert("Review submitted!");
+    setIsSubmitted(true); // Set the form to be hidden after submission
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-gradient-to-r from-blue-200 to-purple-300 min-h-screen flex flex-col justify-center items-center py-6">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-400 mb-6">
+          Thank you for your review!
+        </h1>
+        <p className="text-lg text-gray-950">
+          Your review has been submitted successfully.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gradient-to-r from-blue-200 to-purple-300 min-h-screen flex flex-col justify-center items-center py-6">
@@ -41,7 +56,7 @@ const ReviewsForm = () => {
 
         <div className="mb-4">
           <label
-            htmlFor="email"
+            htmlFor="pooja"
             className="block text-lg font-semibold text-gray-950 mb-2"
           >
             Your Pooja
