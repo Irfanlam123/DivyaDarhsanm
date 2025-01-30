@@ -1,8 +1,9 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import PujaCard from "./components/card";
-import Kashi from "../../../src/assets/Puja/Kashi.jpeg";
-import Kaal from "../../../src/assets/Puja/Kaal.jpeg";
+import img1 from "../../assets/Pujas/cardimg.jpeg"
+import img2 from "../../assets/Pujas/cardImg.jpeg";
+
 import {
   Menu,
   MenuHandler,
@@ -15,7 +16,7 @@ function Puja() {
   const pujaDetails = [
     {
       title: "Shri Kaal Bhairav Aapda Haran ",
-      imageUrl: Kashi,
+      imageUrl: img1,
       location: "Shri Kaal Bhairav Temple, Kashi",
       date: "18th January 2025",
       participants: "120+",
@@ -23,7 +24,7 @@ function Puja() {
     },
     {
       title: "Somwar Mahamrityunjay Mantra",
-      imageUrl: Kaal,
+      imageUrl: img2,
       location: "Mahamrityunjay Temple, Kashi",
       date: "6-Jan-2025, Pasuh Maas",
       participants: "109+",
@@ -31,8 +32,7 @@ function Puja() {
     },
     {
       title: "Makar Sankranti Special Brahman",
-      imageUrl:
-        "https://images.unsplash.com/photo-1713922639539-42572e58cbb9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdhbmdhJTIwYWFydGl8ZW58MHx8MHx8fDA%3D",
+      imageUrl: img1,
       location: "Ganga Ghat, Kashi",
       date: "28-Jan-2025",
       participants: "158+",
@@ -41,7 +41,7 @@ function Puja() {
 
     {
       title: "Shri Kaal Bhairav Aapda Haran ",
-      imageUrl: Kashi,
+      imageUrl: img1,
       location: "Shri Kaal Bhairav Temple, Kashi",
       date: "18th January 2025",
       participants: "120+",
@@ -49,7 +49,7 @@ function Puja() {
     },
     {
       title: "Somwar Mahamrityunjay Mantra",
-      imageUrl: Kaal,
+      imageUrl: img2,
       location: "Mahamrityunjay Temple, Kashi",
       date: "6-Jan-2025, Pasuh Maas",
       participants: "109+",
@@ -57,8 +57,7 @@ function Puja() {
     },
     {
       title: "Makar Sankranti Special Brahman",
-      imageUrl:
-        "https://images.unsplash.com/photo-1713922639539-42572e58cbb9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdhbmdhJTIwYWFydGl8ZW58MHx8MHx8fDA%3D",
+      imageUrl: img1,
       location: "Ganga Ghat, Kashi",
       date: "28-Jan-2025",
       participants: "158+",
@@ -67,7 +66,7 @@ function Puja() {
 
     {
       title: "Shri Kaal Bhairav Aapda Haran ",
-      imageUrl: Kashi,
+      imageUrl: img1,
       location: "Shri Kaal Bhairav Temple, Kashi",
       date: "18th January 2025",
       participants: "120+",
@@ -75,7 +74,7 @@ function Puja() {
     },
     {
       title: "Somwar Mahamrityunjay Mantra",
-      imageUrl: Kaal,
+      imageUrl: img2,
       location: "Mahamrityunjay Temple, Kashi",
       date: "6-Jan-2025, Pasuh Maas",
       participants: "109+",
@@ -83,8 +82,7 @@ function Puja() {
     },
     {
       title: "Makar Sankranti Special Brahman",
-      imageUrl:
-        "https://images.unsplash.com/photo-1713922639539-42572e58cbb9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdhbmdhJTIwYWFydGl8ZW58MHx8MHx8fDA%3D",
+      imageUrl: img1,
       location: "Ganga Ghat, Kashi",
       date: "28-Jan-2025",
       participants: "158+",

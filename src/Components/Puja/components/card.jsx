@@ -43,14 +43,16 @@ function PujaCard({
 
   return (
     <div
-      className="max-w-sm w-full h-[380px] bg-white rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 flex flex-col cursor-pointer md:max-w-xs sm:h-[350px] md:h-[380px] sm:w-[300px] md:w-[320px] lg:w-[350px] xl:w-[400px]"
+      className="max-w-sm w-full h-[360px] bg-white rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 flex flex-col cursor-pointer md:max-w-xs sm:h-[400px] md:h-[420px] sm:w-[320px] md:w-[350px] lg:w-[370px] xl:w-[420px]"
       onClick={handleCardClick}
     >
-      <img
-        className="w-full h-32 sm:h-28 rounded-t-lg object-cover"
-        src={imageUrl}
-        alt={title}
-      />
+      <div className="relative w-full h-40 sm:h-44">
+        <img
+          className="w-full h-full object-cover rounded-t-lg"
+          src={imageUrl}
+          alt={title}
+        />
+      </div>
       <div className="flex flex-col flex-grow p-3">
         <h2 className="text-md font-semibold text-gray-800 text-center sm:text-sm">
           {title}

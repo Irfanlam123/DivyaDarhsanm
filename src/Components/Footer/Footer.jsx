@@ -21,21 +21,21 @@ export default function Footer() {
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           <div>
             <img
-              src={KedarNath}
+              src="https://t4.ftcdn.net/jpg/08/86/69/03/240_F_886690307_WNIj7rGNsWBfCW5gjnesiFxfg9R1aC3D.jpg"
               className="w-full h-[200px] sm:h-[250px] md:h-[270px] rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
               alt="Temple Image 1"
             />
           </div>
           <div>
             <img
-              src={KashiViswa}
+              src="https://t4.ftcdn.net/jpg/09/27/17/99/240_F_927179966_B4Ueo4jKdGvpWe3ofEUfD1iaoULvMZ5D.jpg"
               className="w-full h-[200px] sm:h-[250px] md:h-[270px] rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
               alt="Temple Image 2"
             />
           </div>
           <div>
             <img
-              src={Rameswaram}
+              src="https://t3.ftcdn.net/jpg/06/80/28/38/240_F_680283844_oEF3eLwXdLrsBdxWmzxAUGqnpvGbxHCH.jpg"
               className="w-full h-[200px] sm:h-[250px] md:h-[270px] rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
               alt="Temple Image 3"
             />
