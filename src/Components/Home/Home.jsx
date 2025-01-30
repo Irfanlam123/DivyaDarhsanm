@@ -77,7 +77,7 @@ const Home = () => {
                   alt="Hero Image"
                   className="w-full h-full object-cover object-center md:rounded-lg"
                 />
-                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+                <div className="absolute inset-0 bg-black/50 "></div>
               </div>
 
               {/* Hero Content */}
