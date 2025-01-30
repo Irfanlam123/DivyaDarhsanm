@@ -1,13 +1,9 @@
 import React from "react";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
-import TrishulImage from "../../../src/assets/shiv.webp";
 import TextCarousel from "../ImageCarousel/TextCarousel";
 import { Link } from "react-router-dom";
 import Design from "../Card/Card";
 import Footer from "../Footer/Footer";
-import { GiByzantinTemple } from "react-icons/gi";
-import { FaHandsWash } from "react-icons/fa";
-import FAQs from "../Home/Components/FAQs";
 import FAQPage from "../Home/Components/FAQs";
 import BookingIcon from "../../../src/assets/Homepage/BookingComplete.webp";
 import PoojaIcon from "../../../src/assets/Homepage/Pooja.webp";
@@ -73,34 +69,34 @@ const Home = () => {
           <div className="relative w-full overflow-hidden rounded-md">
             {/* Background Gradient */}
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-200 to-blue-300"></div>
-
-            <div className="relative z-10 w-full h-full">
-              {/* Hero Image with Rounded Corners */}
-              <img
-                src={HeroImage}
-                alt="Hero Image"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-
-              {/* Overlay for Better Text Visibility */}
-              <div className="absolute inset-0 bg-black opacity-40 backdrop-blur-md"></div>
+            <div className="relative w-full min-h-[80vh] flex items-center justify-center text-center px-4 sm:px-8">
+              {/* Hero Image with Overlay */}
+              <div className="absolute inset-0">
+                <img
+                  src={HeroImage}
+                  alt="Hero Image"
+                  className="w-full h-full object-cover object-center md:rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+              </div>
 
               {/* Hero Content */}
-              <div className="relative z-10 flex flex-col justify-center items-center text-center w-full px-6 sm:px-12 md:max-w-[70%] mx-auto py-12">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat text-white mb-4 shadow-lg">
-                  Your Way to
+              <div className="relative z-10 max-w-2xl px-4 sm:px-6 md:px-10 lg:px-16">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg tracking-wide">
+                  Your Way to <br />
+                  <span className="text-orange-400">Sanatan Dharma</span>
                 </h1>
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold font-montserrat text-orange-600 mb-4 shadow-lg">
-                  Sanatan Dharma!
-                </p>
-                <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-lg text-slate-100 font-semibold mb-6 shadow-lg">
+
+                <p className="mt-3 sm:mt-5 text-sm sm:text-lg md:text-xl text-slate-200 font-medium tracking-wide leading-relaxed">
                   Daily darshans, Puja rituals, and Chadhava offerings, all in
-                  one.
+                  one place.
                 </p>
-                <div className="py-6 md:py-8">
+
+                {/* CTA Button */}
+                <div className="mt-5 sm:mt-8">
                   <Link
                     to="/Puja"
-                    className="inline-block bg-slate-100 text-gray-950 py-2 px-5 sm:px-6 md:px-6 rounded-full text-sm sm:text-sm font-semibold font-montserrat hover:bg-yellow-300 hover:text-slate-950 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="inline-block bg-gradient-to-r from-orange-400 to-yellow-300 text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   >
                     Puja Now
                   </Link>
@@ -120,9 +116,7 @@ const Home = () => {
               className="relative bg-gradient-to-r from-blue-100 to-slate-300 flex flex-col w-full sm:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-105 transition-transform duration-300 overflow-hidden"
             >
               {/* Title text positioned over the image */}
-              <h2 className="absolute top-2 left-2 right-2 text-lg font-bold text-white bg-black/50  py-0 rounded-full text-center">
-                
-              </h2>
+              <h2 className="absolute top-2 left-2 right-2 text-lg font-bold text-white bg-black/50  py-0 rounded-full text-center"></h2>
 
               {/* Image container */}
               <div className="w-full h-full overflow-hidden bg-gray-300">

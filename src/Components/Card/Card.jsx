@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Kaal from "../../../src/assets/Puja/Kaal.jpeg";
+import Kaal from "../../../src/assets/Pujas/cardimg.jpeg";
+import Kaal2 from "../../../src/assets/Pujas/cardImg.jpeg";
 
 const Design = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Design = () => {
     },
     {
       id: 2,
-      image: Kaal,
+      image: Kaal2,
       heading: "Kaal Bhairav Temple, Kashi",
       des: "Kaal Bhairav ​​Ashtakam and Maha Aarti at Shree Kaal Bhairav Temple, Kashi.",
     },
