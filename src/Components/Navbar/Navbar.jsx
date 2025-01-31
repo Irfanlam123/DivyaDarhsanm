@@ -13,13 +13,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-blue-100 to-purple-200 p-3 font-montserrat shadow-lg">
+    <nav className="bg-gradient-to-r from-slate-50 to-red-100 p-3 font-montserrat shadow-2xl  mt-2">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
-          <span className="text-slate-950 font-extrabold text-xl">
-            DivyaDarshanm
+          <img
+            src="https://divyadarshanm.in/wp-content/uploads/2024/11/cropped-Divyadarshanm-1.png"
+            alt="Logo"
+            className="w-20 h-12 "
+          />
+          <span className="text-red-600  font-extrabold text-xl">
+            
           </span>
         </div>
 
@@ -87,7 +91,6 @@ const Navbar = () => {
             <button className="block w-full bg-slate-50 text-neutral-700 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200">
               Login
             </button>
-           
           </div>
         </div>
       )}
