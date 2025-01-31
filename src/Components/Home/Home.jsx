@@ -84,8 +84,8 @@ const Home = () => {
     },
   ];
   return (
-    <div className="bg-blue-50 font-poppins mt-2">
-      <div className="  p-3 shadow-xl">
+    <div className="bg-blue-50 font-poppins mt-0">
+      <div className="  p-2 shadow-xl">
         <div className="relative p-2 shadow-2xl">
           <div className="flex flex-col justify-center items-center ">
             {/* Div Sections */}
@@ -94,7 +94,7 @@ const Home = () => {
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-200 to-blue-300"></div>
               <div className="relative w-full h-screen flex items-center justify-center text-center px-4 sm:px-8">
                 {/* Hero Image with Overlay */}
-                <div className="absolute inset-0 max-h-screen">
+                <div className="absolute inset-0 ">
                   <img
                     src={HeroImage}
                     alt="Hero Image"
