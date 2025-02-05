@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../../src/assets/logo.jpeg";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,29 +12,29 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-slate-50 to-red-100 p-3 font-montserrat shadow-2xl  mt-2">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="bg-gradient-to-r from-blue-200 to-red-100 p-3 font-montserrat shadow-2xl">
+      <div className="container mx-auto flex items-center justify-between py-0">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 px-6">
           <img
             src="https://divyadarshanm.in/wp-content/uploads/2024/11/cropped-Divyadarshanm-1.png"
             alt="Logo"
-            className="w-20 h-12 "
+            className="w-20 h-12"
           />
-          <span className="text-red-600  font-extrabold text-xl">
-            
+          <span className="text-red-600 font-extrabold text-lg">
+            Divyadarshanm
           </span>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 justify-center flex-1">
+        {/* Desktop Menu (Centered) */}
+        <ul className="hidden md:flex flex-1 justify-center space-x-8">
           {navItems.map((item, index) => (
             <li key={index} className="text-center">
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-slate-700 hover:transition-all text-sm hover:text-orange-400 font-semibold ${
-                    isActive ? "font-bold text-[#fdfcfb]" : ""
+                  `text-slate-700 text-sm hover:text-orange-400 font-semibold transition-all ${
+                    isActive ? "font-bold text-red-600" : ""
                   }`
                 }
               >
@@ -49,9 +48,6 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           <button className="bg-slate-50 text-neutral-700 px-4 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200">
             Login
-          </button>
-          <button className="bg-slate-50 px-4 py-2 border-2 rounded-md shadow-md hover:bg-slate-900 hover:font-semibold hover:text-white transition duration-200">
-            Signup
           </button>
         </div>
 
@@ -67,17 +63,17 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Centered) */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 space-y-4">
+        <div className="md:hidden mt-2 space-y-4 text-center">
           <ul className="space-y-2">
             {navItems.map((item, index) => (
-              <li key={index} className="text-center">
+              <li key={index}>
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
                     `block text-slate-700 text-sm hover:text-orange-400 font-semibold ${
-                      isActive ? "font-bold text-[#fdfcfb]" : ""
+                      isActive ? "font-bold text-red-600" : ""
                     }`
                   }
                   onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
@@ -87,7 +83,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="space-y-2 text-center">
+          <div>
             <button className="block w-full bg-slate-50 text-neutral-700 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200">
               Login
             </button>

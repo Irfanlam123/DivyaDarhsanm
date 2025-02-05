@@ -1,4 +1,3 @@
-import React from "react";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import TextCarousel from "../ImageCarousel/TextCarousel";
 import { Link } from "react-router-dom";
@@ -84,46 +83,38 @@ const Home = () => {
     },
   ];
   return (
-    <div className="bg-blue-50 font-poppins mt-0">
-      <div className="  p-2 shadow-xl">
-        <div className="relative p-2 shadow-2xl">
-          <div className="flex flex-col justify-center items-center ">
-            {/* Div Sections */}
-            <div className="relative w-full overflow-hidden rounded-md">
-              {/* Background Gradient */}
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-200 to-blue-300"></div>
-              <div className="relative w-full h-screen flex items-center justify-center text-center px-4 sm:px-8">
-                {/* Hero Image with Overlay */}
-                <div className="absolute inset-0 ">
-                  <img
-                    src={HeroImage}
-                    alt="Hero Image"
-                    className="w-full h-full object-cover object-center md:rounded-lg"
-                  />
-                  <div className="absolute inset-0 bg-black/50 "></div>
-                </div>
+    <div className="bg-blue-50 font-poppins">
+      <div className=" px-1 -m-px">
+        <div className="relative p-2 shadow-4xl ">
+          <div className="flex flex-col justify-center items-center  ">
+            <div className="relative w-full h-[520px] sm:h-[450px] md:h-[400px] lg:h-[520px] xl:h-[520px] flex items-center justify-center text-center rounded-sm px-4 sm:px-8">
+              <div className="absolute inset-0 ">
+                <img
+                  src={HeroImage}
+                  alt="Hero Image"
+                  className="w-full h-full object-cover object-center  md:rounded-sm"
+                />
+                <div className="absolute inset-0 bg-black/50 "></div>
+              </div>
 
-                {/* Hero Content */}
-                <div className="relative z-10 max-w-2xl px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-12">
-                  <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg tracking-wide">
-                    Your Way to <br />
-                    <span className="text-orange-400">Sanatan Dharma</span>
-                  </h1>
+              <div className="relative z-10 max-w-2xl px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-12">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg tracking-wide">
+                  Your Way to <br />
+                  <span className="text-orange-400">Sanatan Dharma</span>
+                </h1>
 
-                  <p className="mt-3 sm:mt-5 text-sm sm:text-lg md:text-xl text-slate-200 font-medium tracking-wide leading-relaxed">
-                    Daily darshans, Puja rituals, and Chadhava offerings, all in
-                    one place.
-                  </p>
+                <p className="mt-3 sm:mt-5 text-sm sm:text-lg md:text-xl text-slate-200 font-medium tracking-wide leading-relaxed">
+                  Daily darshans, Puja rituals, and Chadhava offerings, all in
+                  one place.
+                </p>
 
-                  {/* CTA Button */}
-                  <div className="mt-4 sm:mt-6">
-                    <Link
-                      to="/Puja"
-                      className="inline-block bg-gradient-to-r from-orange-400 to-yellow-300 text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                    >
-                      Puja Now
-                    </Link>
-                  </div>
+                <div className="mt-4 sm:mt-6">
+                  <Link
+                    to="/Puja"
+                    className="inline-block bg-gradient-to-r from-orange-400 to-yellow-300 text-gray-900 px-6 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                  >
+                    Puja Now
+                  </Link>
                 </div>
               </div>
             </div>
@@ -138,10 +129,8 @@ const Home = () => {
                 key={card.id}
                 className="relative bg-white flex flex-col w-full sm:w-[calc(50%-1rem)] h-48 rounded-lg shadow-lg p-4 items-center hover:scale-105 transition-transform duration-300 overflow-hidden"
               >
-                {/* Title text positioned over the image */}
                 <h2 className="absolute top-2 left-2 right-2 text-lg font-bold text-white bg-black/50  py-0 rounded-full text-center"></h2>
 
-                {/* Image container */}
                 <div className="w-full h-full overflow-hidden bg-gray-300">
                   <img
                     src={card.src}
@@ -177,7 +166,7 @@ const Home = () => {
 
         <div className="py-4 bg-gradient-to-r  ">
           <Design />
-          <Design />
+         
         </div>
 
         <div
@@ -224,19 +213,24 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap gap-28 p-6 justify-center mt-8 bg-[#fceaeace] font-montserrat items-center w-full shadow-2xl rounded-lg">
+          <div className="flex flex-wrap gap-8 p-6 justify-center mt-8 bg-[#fceaeace] font-montserrat items-center w-full shadow-2xl rounded-lg">
             {items.map(({ id, imgSrc, text }) => (
-              <div key={id} className="flex flex-col  ">
-                <div className="w-16 h-10 bg-red-500 flex items-center px-4 ">
+              <div
+                key={id}
+                className="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+              >
+                <div className="w-16 h-10 bg-red-500 flex items-center justify-center px-4">
                   <img
                     src={imgSrc}
                     alt="Placeholder"
-                    className=" h-8 object-cover   shadow-sm "
+                    className="h-8 object-cover shadow-sm"
                   />
                 </div>
-                <p className="text-sm text-gray-800 mt-2 max-w-[200px] leading-relaxed">
-                  {text}
-                </p>
+                {text && (
+                  <p className="text-sm text-gray-800 mt-2 max-w-[200px] leading-relaxed text-center">
+                    {text}
+                  </p>
+                )}
               </div>
             ))}
           </div>
@@ -252,21 +246,6 @@ const Home = () => {
               src="https://divyadarshanm.in/wp-content/uploads/2024/11/map.svg"
               alt="Puja Kshetras Map"
             />
-          </div>
-        </div>
-
-        <div className="bg-pink-50">
-          <h1 className="font-bold text-xl sm:text-xl md:text-2xl font-montserrat text-orange-400 flex justify-center py-6 px-4 sm:px-0">
-            Start Your Spiritual Journey
-          </h1>
-
-          <div className="flex justify-center">
-            <Link
-              to="/Puja"
-              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-400 hover:to-orange-500 text-black py-2 px-6 rounded-sm text-sm sm:text-base md:text-lg font-montserrat transition-all duration-300 transform hover:scale-105 mb-10"
-            >
-              Book Now
-            </Link>
           </div>
         </div>
 

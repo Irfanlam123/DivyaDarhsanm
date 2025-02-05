@@ -43,7 +43,7 @@ function PujaCard({
 
   return (
     <div
-      className="max-w-sm w-full h-[360px] bg-white rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 flex flex-col cursor-pointer md:max-w-xs sm:h-[400px] md:h-[420px] sm:w-[320px] md:w-[350px] lg:w-[370px] xl:w-[420px]"
+      className="max-w-sm w-full h-[320px] bg-white rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 flex flex-col cursor-pointer md:max-w-xs sm:h-[400px] md:h-[420px] sm:w-[320px] md:w-[350px] lg:w-[370px] xl:w-[420px]"
       onClick={handleCardClick}
     >
       <div className="relative w-full h-40 sm:h-44">
@@ -93,5 +93,4 @@ function PujaCard({
     </div>
   );
 }
-
 export default PujaCard;
