@@ -251,7 +251,7 @@ const Home = () => {
 
         <div className="bg-purple-300 py-6">
           <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl font-montserrat text-orange-400 text-center">
-            Devotees' Review
+            Devotees Review
           </h1>
           <p className="font-bold text-lg sm:text-xl md:text-2xl font-montserrat text-gray-950 text-center mt-2">
             Hear it from our blessed devotees
