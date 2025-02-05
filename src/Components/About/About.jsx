@@ -1,6 +1,5 @@
-import React from "react";
 import Footer from "../Footer/Footer";
-
+import {motion} from 'motion/react'
 function About() {
   return (
     <div className="font-montserrat">
@@ -93,7 +92,22 @@ function About() {
             </p>
           </div>
         </section>
+        <motion.div
+          className="w-60 h-40 rounded-2xl mt-4 bg-red-300"
+          animate={{
+            x: 900,
+            y:200
+          }}
+        ></motion.div>
+        <motion.div
+          className="w-60 h-40 rounded-full mt-4 bg-blue-300"
+          animate={{
+            x: 400,
+            scale:0.9
+          }}
+        ></motion.div>
       </div>
+
       <Footer />
     </div>
   );

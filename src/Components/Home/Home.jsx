@@ -34,32 +34,7 @@ const Home = () => {
       text: "Additionally, Prasad will be delivered to your doorstep within 14 days of the puja, allowing you to receive the divine blessings at home.",
     },
   ];
-  const pujaProcess = [
-    {
-      id: 1,
-      title: "Puja Process",
-      image:
-        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
-    },
-    {
-      id: 1,
-      title: "Puja Process",
-      image:
-        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
-    },
-    {
-      id: 1,
-      title: "Puja Process",
-      image:
-        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
-    },
-    {
-      id: 1,
-      title: "Puja Process",
-      image:
-        "https://media.istockphoto.com/id/1164329797/photo/hindu-sadhu-sitting-on-a-boat-overlooking-varanasi-city-architecture-at-sunset.jpg?b=1&s=612x612&w=0&k=20&c=x9vjcbG92K37JF5qTWD8ZEV7M2gFnYbPKgsFjFhzuMQ=",
-    },
-  ];
+  
   const cardData = [
     {
       id: 1,
