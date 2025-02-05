@@ -22,7 +22,7 @@ const Navbar = () => {
             className="w-20 h-12"
           />
           <span className="text-red-600 font-extrabold text-lg">
-            Divyadarshanm
+            DivyaDarshanm
           </span>
         </div>
 

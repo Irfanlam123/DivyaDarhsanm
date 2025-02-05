@@ -222,14 +222,16 @@ function Puja() {
     <div className="min-h-screen bg-gray-100">
       <div className="p-4 max-w-6xl mx-auto">
         <div className="px-4 bg-slate-800 rounded-md flex flex-col items-center justify-center pb-8 w-full">
-          <p className="text-lg sm:text-xl md:text-2xl text-slate-50 font-bold py-6">
+          {/* Title */}
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-50 font-bold py-6 text-center">
             卐 Upcoming Puja 卐
           </p>
 
-          <div className="mt-3 w-full sm:w-3/4 lg:w-1/2 flex justify-center">
+          {/* Search Box */}
+          <div className="mt-3 w-full flex justify-center">
             <input
               type="text"
-              className="bg-slate-50 text-slate-950 rounded-full px-16 py-2 font-montserrat"
+              className="bg-slate-50 text-slate-950 rounded-full px-6 py-2 font-montserrat w-full max-w-lg sm:w-3/4 md:w-1/2"
               placeholder="Search Pujas by Date or Month"
               value={searchTerm}
               onChange={handleSearchChange}
