@@ -63,15 +63,15 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           <Link
             to="/signup"
-            className="bg-slate-50 text-neutral-700 px-4 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+            className="bg-slate-50 text-neutral-700 px-4 text-[15px]   py-0 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
           >
             SignUp
           </Link>
           <Link
-            to={'/'}
-            className="bg-slate-50 text-neutral-700 px-4 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+            to={"/"}
+            className="bg-slate-50 text-neutral-700 px-4 py-0 text-[15px] rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
           >
-           + Puja
+            <span className=" font-bold text-xl">+</span> Puja
           </Link>
         </div>
 
@@ -118,12 +118,19 @@ const Navbar = () => {
 
           {/* Mobile Buttons */}
           <div className="flex flex-col space-y-2 px-4">
-            <button className="w-full bg-slate-50 text-neutral-700 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200">
-              Login
-            </button>
-            <button className="w-full bg-slate-50 text-neutral-700 py-2 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200">
-              Add Puja
-            </button>
+            <Link
+              to="/signup"
+              className="bg-slate-50 text-neutral-700 px-2 text-sm   py-0 rounded-full shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+            >
+              SignUp
+            </Link>
+
+            <Link
+              to={"/"}
+              className="bg-slate-50 text-neutral-700 px-2 py-0 text-sm rounded-full shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+            >
+              <span className=" font-bold text-xl">+</span> Puja
+            </Link>
           </div>
         </div>
       )}

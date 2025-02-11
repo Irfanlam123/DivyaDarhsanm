@@ -56,33 +56,35 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="p-0">
-      <div className="w-full mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6 py-2">
-          Frequently Asked Questions
-        </h1>
+    <div className="p-10 bg-purple-300 ">
+      <div className="p-0">
+        <div className="w-full mx-auto mt-10 p-6 bg-white shadow-xl rounded-xl">
+          <h1 className="text-2xl font-bold text-gray-800 mb-6 py-2">
+            Frequently Asked Questions
+          </h1>
 
-        {faqData.map((faq, index) => (
-          <div key={index} className="border-b-2 border-gray-200 py-4">
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full text-left text-xl font-medium text-gray-700 focus:outline-none"
-            >
-              <div className="flex justify-between items-center">
-                <span className="text-[17px] font-montserrat font-bold">
-                  {faq.question}
-                </span>
-                <span>{openIndex === index ? "-" : "+"}</span>
-              </div>
-            </button>
+          {faqData.map((faq, index) => (
+            <div key={index} className="border-b-2 border-gray-200 py-4">
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left text-xl font-medium text-gray-700 focus:outline-none"
+              >
+                <div className="flex justify-between items-center">
+                  <span className="text-[17px] font-montserrat font-bold">
+                    {faq.question}
+                  </span>
+                  <span>{openIndex === index ? "-" : "+"}</span>
+                </div>
+              </button>
 
-            {openIndex === index && (
-              <p className="mt-2 text-gray-600 px-2 text-[16px] ">
-                {faq.answer}
-              </p>
-            )}
-          </div>
-        ))}
+              {openIndex === index && (
+                <p className="mt-2 text-gray-600 px-2 text-[16px] ">
+                  {faq.answer}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

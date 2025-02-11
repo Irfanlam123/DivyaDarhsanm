@@ -26,12 +26,16 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form Data Submitted:", user); // Console me print karne ke liye
+
     try {
       const response = await axios.post(
         "http://localhost:5003/api/auth/signup",
         user
       );
       alert(response.data.message);
+
+      // Form reset
       setUser({
         name: "",
         gotra: "",
@@ -47,9 +51,11 @@ const Signup = () => {
     }
   };
 
+  
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-6">
-      <div className="bg-white shadow-2xl rounded-2xl p-8 max-w-md w-full relative">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 p-6">
+      <div className="bg-white shadow-2xl rounded-xl p-8 max-w-md w-full relative">
         {/* Close Button */}
         <button
           onClick={() => navigate("/")}

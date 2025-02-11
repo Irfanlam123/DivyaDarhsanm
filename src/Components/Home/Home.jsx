@@ -127,17 +127,7 @@ const Home = () => {
           <TextCarousel />
         </div>
 
-        <div className="flex justify-center py-3 ">
-          <a
-            href="/Puja"
-            className="font-bold text-xl text-slate-800 font-montserrat  decoration-2 underline-offset-4 flex items-center  transition duration-300 hover:text-[#d45505] hover:underline-offset-4"
-          >
-            View all Pujas
-            <span className="text-2xl  items-center transition-transform duration-300 hover:translate-x-1">
-              →
-            </span>
-          </a>
-        </div>
+        
 
         <div className="py-4 bg-gradient-to-r  ">
           <Design />
