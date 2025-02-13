@@ -7,26 +7,19 @@ const Signup = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
-    gotra: "",
     phone: "",
     email: "",
     password: "",
-    dakshina: "",
-    vastra: false,
-    kambal: false,
   });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setUser({
-      ...user,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", user); // Console me print karne ke liye
+    console.log("Form Data Submitted:", user);
 
     try {
       const response = await axios.post(
@@ -35,39 +28,31 @@ const Signup = () => {
       );
       alert(response.data.message);
 
-      // Form reset
       setUser({
         name: "",
-        gotra: "",
         phone: "",
         email: "",
         password: "",
-        dakshina: "",
-        vastra: false,
-        kambal: false,
       });
     } catch (error) {
       alert("Error: " + error.response.data.error);
     }
   };
 
-  
-
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 p-6">
-      <div className="bg-white shadow-2xl rounded-xl p-8 max-w-md w-full relative">
-        {/* Close Button */}
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 p-4">
+      <div className="bg-white shadow-lg rounded-xl p-6 w-full max-w-sm relative">
         <button
           onClick={() => navigate("/")}
-          className="absolute top-3 right-3 text-gray-600 hover:text-gray-900"
+          className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
         >
-          <X size={24} />
+          <X size={20} />
         </button>
 
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-          Signup
+        <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
+          Create an Account
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3">
           <input
             type="text"
             name="name"
@@ -75,15 +60,7 @@ const Signup = () => {
             value={user.name}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-          />
-          <input
-            type="text"
-            name="gotra"
-            placeholder="Gotra"
-            value={user.gotra}
-            onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
           <input
             type="tel"
@@ -92,7 +69,7 @@ const Signup = () => {
             value={user.phone}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
           <input
             type="email"
@@ -101,7 +78,7 @@ const Signup = () => {
             value={user.email}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
           <input
             type="password"
@@ -110,46 +87,18 @@ const Signup = () => {
             value={user.password}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
-          <input
-            type="number"
-            name="dakshina"
-            placeholder="Dakshina to Brahman (₹)"
-            value={user.dakshina}
-            onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-          />
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              name="vastra"
-              checked={user.vastra}
-              onChange={handleChange}
-              className="w-5 h-5 text-purple-600"
-            />
-            <label className="text-gray-700">Bharman Vastra</label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              name="kambal"
-              checked={user.kambal}
-              onChange={handleChange}
-              className="w-5 h-5 text-purple-600"
-            />
-            <label className="text-gray-700">Kambal Seva</label>
-          </div>
           <button
             type="submit"
-            className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300"
+            className="w-full bg-purple-600 text-white py-2 rounded-md font-semibold hover:bg-purple-700 transition duration-300"
           >
             Signup
           </button>
         </form>
-        <p className="text-gray-500 text-center mt-4">
+        <p className="text-gray-500 text-center mt-3 text-sm">
           Already have an account?
-          <a href="#" className="text-purple-600 hover:underline font-semibold">
+          <a href="#" className="text-purple-600 hover:underline font-medium">
             {" "}
             Login
           </a>
