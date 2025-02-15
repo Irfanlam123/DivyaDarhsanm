@@ -68,8 +68,8 @@ const Navbar = () => {
             SignUp
           </Link>
           <Link
-            to={"/"}
-            className="bg-slate-50 text-neutral-700 px-4 py-0 text-[15px] rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+            to={"/pujaForm"}
+            className="bg-red-300 text-neutral-700 px-4 py-0 text-[15px] rounded-full shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
           >
             <span className=" font-bold text-xl">+</span> Puja
           </Link>

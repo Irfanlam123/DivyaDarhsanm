@@ -23,7 +23,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5003/api/auth/signup",
+        "http://localhost:5006/api/auth/signup",
         user
       );
       alert(response.data.message);

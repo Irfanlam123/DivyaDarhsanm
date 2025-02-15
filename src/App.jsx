@@ -10,6 +10,7 @@ import TermCondition from "./Components/Terms-and-conditions/Term&Condition";
 import PrivacyPolicy from "./Components/Privacy-policy/PrivacyPolicy";
 import ReviewsForm from "./Components/Home/reviesForm";
 import Signup from "./Components/Login/signup";
+import PujaForm from "./Components/Login/pujaForm";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/reviews-form" element={<ReviewsForm />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/pujaForm" element ={<PujaForm/>}  />
       </Routes>
     </Router>
   );

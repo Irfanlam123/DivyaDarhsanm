@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import {
   FaFacebook,
@@ -9,9 +8,6 @@ import {
 } from "react-icons/fa";
 
 import Logo from "../../../src/assets/logo.jpeg";
-import KedarNath from "../../../src/assets/Footer/kedarNath.webp";
-import KashiViswa from "../../../src/assets/Footer/KashiViswanath.webp";
-import Rameswaram from "../../../src/assets/Footer/Rameswaram.webp";
 
 export default function Footer() {
   return (
