@@ -59,7 +59,8 @@ const Design = () => {
                 e.stopPropagation(); // Prevents card click event
                 handleNavigation(card.id);
               }}
-              className="mt-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-md shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center"
+              className="mt-4 
+              bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-md shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center"
             >
               Book Now
             </button>

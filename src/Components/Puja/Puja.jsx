@@ -67,8 +67,10 @@ const Puja = () => {
                 {puja.description}
               </p>
               {/* Puja Location & Date (Left Aligned) */}
-              <p className="text-gray-600 text-left mt-3">📍 {puja.location}</p>
-              <p className="text-gray-600 text-left mt-1">
+              <p className="text-[#6A0DAD] text-left mt-3">
+                📍 {puja.location}
+              </p>
+              <p className="text-[#0056b3] text-left mt-1">
                 📅 {new Date(puja.date).toLocaleDateString("en-GB")}
               </p>
 

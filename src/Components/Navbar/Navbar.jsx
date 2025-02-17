@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-red-50 p-3 font-montserrat shadow-2xl">
+    <nav className="bg-slate-100 p-3 font-montserrat shadow-2xl">
       <div className="container mx-auto flex items-center justify-between py-0">
         {/* Logo */}
         <div className="flex items-center space-x-2 px-6">
@@ -63,15 +63,16 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           <Link
             to="/signup"
-            className="bg-slate-50 text-neutral-700 px-4 text-[15px]   py-0 rounded-md shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+            className="text-sm  bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  "
           >
-            SignUp
+            {" "}
+            Signup
           </Link>
           <Link
             to={"/pujaForm"}
-            className="bg-red-300 text-neutral-700 px-4 py-0 text-[15px] rounded-full shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+            className=" text-sm bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-5 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  "
           >
-            <span className=" font-bold text-xl">+</span> Puja
+            <span>+</span> Puja
           </Link>
         </div>
 
@@ -120,14 +121,15 @@ const Navbar = () => {
           <div className="flex flex-col space-y-2 px-4">
             <Link
               to="/signup"
-              className="bg-slate-50 text-neutral-700 px-2 text-sm   py-0 rounded-full shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+              className=" bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-1 px-4 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  mt-4 "
             >
+              {" "}
               SignUp
             </Link>
 
             <Link
               to={"/"}
-              className="bg-slate-50 text-neutral-700 px-2 py-0 text-sm rounded-full shadow-md hover:bg-gray-400 hover:text-slate-50 transition duration-200 mt-4 inline-block"
+              className=" bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-1 px-4 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  mt-4 "
             >
               <span className=" font-bold text-xl">+</span> Puja
             </Link>
