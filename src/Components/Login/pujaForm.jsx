@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -9,6 +10,8 @@ const PujaForm = () => {
     description: "",
     image: "",
     price: "",
+    location: "", // New field for location
+    date: "", // New field for date
   });
 
   // Handle Input Change
@@ -77,7 +80,7 @@ const PujaForm = () => {
             ></textarea>
           </div>
 
-          {/* Puja Image (URL for simplicity) */}
+          {/* Puja Image URL */}
           <div>
             <label className="block text-gray-700 font-medium mb-1">
               Puja Image URL
@@ -104,6 +107,37 @@ const PujaForm = () => {
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400"
               placeholder="Enter Puja Price"
+              required
+            />
+          </div>
+
+          {/* Puja Location */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">
+              Puja Location
+            </label>
+            <input
+              type="text"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400"
+              placeholder="Enter Puja Location"
+              required
+            />
+          </div>
+
+          {/* Puja Date */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">
+              Puja Date
+            </label>
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400"
               required
             />
           </div>
