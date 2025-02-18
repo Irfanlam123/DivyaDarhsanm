@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -66,15 +65,16 @@ const Puja = () => {
               <p className="mt-3 text-gray-700 text-center">
                 {puja.description}
               </p>
-              {/* Puja Location & Date (Left Aligned) */}
-              <p className="text-[#6A0DAD] text-left mt-3">
-                📍 {puja.location}
-              </p>
-              <p className="text-[#0056b3] text-left mt-1">
-                📅 {new Date(puja.date).toLocaleDateString("en-GB")}
-              </p>
 
-              {/* Book Now Button inside Link */}
+              {/* Puja Location & Date (Left Aligned on All Screens) */}
+              <div className="mt-3">
+                <p className="text-[#6A0DAD] text-left">📍 {puja.location}</p>
+                <p className="text-[#0056b3] text-left">
+                  📅 {new Date(puja.date).toLocaleDateString("en-GB")}
+                </p>
+              </div>
+
+              {/* Book Now Button */}
               <div className="mt-4 flex justify-center">
                 <Link
                   to={`/book/${puja.id}`}

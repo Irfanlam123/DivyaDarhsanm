@@ -1,6 +1,9 @@
+
+
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { X } from "lucide-react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,8 +17,8 @@ const Navbar = () => {
 
   // Animation for text hover
   const hoverAnimation = {
-    hover: { y: -5 }, // Move up a little bit when hovered
-    rest: { y: 0 }, // Return to original position
+    hover: { y: -5 },
+    rest: { y: 0 },
   };
 
   return (
@@ -33,7 +36,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Desktop Menu (Centered) */}
+        {/* Desktop Menu */}
         <ul className="hidden md:flex flex-1 justify-center space-x-8">
           {navItems.map((item, index) => (
             <li key={index} className="text-center">
@@ -63,14 +66,13 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           <Link
             to="/signup"
-            className="text-sm  bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  "
+            className="text-sm bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-4 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105"
           >
-            {" "}
             Signup
           </Link>
           <Link
             to={"/pujaForm"}
-            className=" text-sm bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-5 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  "
+            className="text-sm bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-5 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105"
           >
             <span>+</span> Puja
           </Link>
@@ -81,17 +83,30 @@ const Navbar = () => {
           <button
             className="text-gray-900 bg-gray-200 px-2"
             aria-label="Toggle Menu"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setIsMobileMenuOpen(true)}
           >
             ☰
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu (Centered) */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 space-y-4 text-center">
-          <ul className="space-y-2">
+      {/* Mobile Sidebar Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform z-50 ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <button
+          className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <X size={24} />
+        </button>
+
+        {/* Menu Items */}
+        <div className="mt-16 space-y-4 text-center">
+          <ul className="space-y-4">
             {navItems.map((item, index) => (
               <li key={index}>
                 <motion.div
@@ -104,11 +119,11 @@ const Navbar = () => {
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `block text-slate-700 text-sm hover:text-orange-400 font-semibold ${
+                      `block text-slate-700 text-lg hover:text-orange-400 font-semibold ${
                         isActive ? "font-bold text-red-600" : ""
                       }`
                     }
-                    onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
                   </NavLink>
@@ -121,21 +136,16 @@ const Navbar = () => {
           <div className="flex flex-col space-y-2 px-4">
             <Link
               to="/signup"
-              className=" bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-1 px-4 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  mt-4 "
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-2 px-3  rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              {" "}
               SignUp
             </Link>
 
-            <Link
-              to={"/"}
-              className=" bg-gradient-to-r from-blue-500 to-purple-500 hover:from-yellow-500 hover:to-orange-400 text-white font-medium py-1 px-4 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 self-center  mt-4 "
-            >
-              <span className=" font-bold text-xl">+</span> Puja
-            </Link>
+           
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
